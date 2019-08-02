@@ -8,9 +8,12 @@
 
 ## 安装相关服务 <a id="install"></a>
 
+* [Namespace](install/install-namespace.md)
 * [持久化存储](install/install-storage.md)
 * [安装Redis 单点](install/install-redis-single.md)
 * [安装Consul集群](install/install-consul-cluster.md)
+* [安装RabbitMQ服务](install/install-rabbitmq.md)
+* [安装Mysql服务](install/install-mysql.md)
 
 ## 使用 <a id="use"></a>
 
