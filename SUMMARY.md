@@ -20,18 +20,19 @@
 - [安装ELK](install/elk.md)
 - [安装Prometheus]()
 - [安装Jenkins](install/jenkins.md)
-- [安装kplcloud](install/kpaas.md)
+- 
 
 ## 开始
 
 - [jenkins及git的SSHKey配置](jenkins.md)
+- [安装kplcloud](install/kpaas.md)
 
 
 
 ## 使用
 
-- [登陆]()
-- [模版管理]()
+- [登陆](start/login.md)
+- [模版管理](start/template.md)
 - [Webhooks功能使用]()
 - [绑定微信消息推送]()
 - [定时任务]()
