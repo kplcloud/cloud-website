@@ -16,7 +16,7 @@ description: app.cfg 配置文件解析>
 | http\_proxy | 代理服务地址 | 如果您的环境是隔离的，又需要访问外网的话就填写 |
 | logs\_path | 日志文件目录 | 如果填写由会输出日志文件到指定目录 |
 | upload\_path | 上传文件的路径 | 如果需要持久化请配置pvc |
-| domain | 网站域名 | kplcloud.kpaas.nsini.com |
+| domain | 网站域名 | https://kplcloud.nsini.com |
 | login\_type | 登陆的类型 | 1. ldap 需要在下面的 \[ldap\] 填写相关的ldap地址及配置信息 2. email 邮箱登陆 |
 | consul\_kv | 是否启用consul作为配置中心,并可在该平台进行kv的操作 | false |
 | app\_key | 用作加密解密使用的key |  |
@@ -234,15 +234,15 @@ image_pull_secrets = regcred
 ; credentials_id: 访问jenkins的凭据, 可以在jenkins的 credentials/store/system/domain/_/credential进行配置或创建
 [jenkins]
 host = http://jenkins.kpaas.nsini.com/
-token = 118d03c07ccab3e137f0f0491cb05aac87
+token = 
 user = admin
-credentials_id = 5c99ccc1-80bd-4c7c-a711-ed7879a6beb4
+credentials_id = 
 ​
 ; [consul]
 ; consul_token: 连接consul的 token
 ; consul_addr: consul地址 http://consul:8500
 [consul]
-consul_token = 398073a8-5091-4d9c-871a-bbbeb030d1f6
+consul_token = 
 consul_addr = http://consul:8500
 ​
 ; [amqp]
@@ -261,16 +261,14 @@ routing_key = kplcloud
 ;   1. gitlab: 使用内部自建的gitlab gitlab的版本需要支持v3 api,如果不支持 您可以自己行加载应用的package
 ;   2. github: 使用公共的github
 ; git_addr: git API地址, 例如: http://gitlab.domain.idc/api/v4/  v3 的API暂时不支持
-; token: 访问相关git的token 需要所有基础的clone权限 0d6f6bc3ecaf97fc87aa2b8bf3e7e7d27667920b
+; token: 访问相关git的token 需要所有基础的clone权限 
 ; client_id:  如果使用的是github 由需要用这个在https://github.com/settings/developers上查找
 [git]
 git_type = gitlab
-;git_addr = http://10.141.4.186
-;token = 1bGKBBy6prizSFSswebq
 ;git_addr = https://gitlab.com
-;token = fpeYxskBEP29qzzyFu2T
+;token = 
 git_type = github
-token = 0d6f6bc3ecaf97fc87aa2b8bf3e7e7d27667920b
+token = 
 ;client_id = github-api
 ​
 ; [email]
@@ -301,16 +299,12 @@ ldap_attr = name;mail
 ; app_id: 微信公众号的应用ID
 ; access_token: 微信公众号的应用access_token
 [wechat]
-app_id = wx5166a04186357a85
-app_secret = fcf03fae71cfee9a71fdf4af4c05b84b
-token = WECHATSDKGO
+app_id = 
+app_secret = 
+token = 
 encoding_aes_key =
 cache_model = file
 cache_file = /tmp/kpaas/cache/cache.txt
-log_level = 1
-log_path = /tmp/kpaas/log/
-log_name = wechat-sdk-log
-log_suffix = log
 ​
 ; [msg]
 ; 消息分发中心，默认接收消息的管理员id
