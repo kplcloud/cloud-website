@@ -4,7 +4,7 @@ description: >-
   服务器上拉取到jenkins服务器上进行编译，所以我们需要让jenkins服务有对git服务的访问权限。以下是介绍如何让jenkins有对gitlab和github的访问权限配置。
 ---
 
-# 配置gitlab与jenkins服务访问权
+# jenkins
 
 ### gitlab配置
 
