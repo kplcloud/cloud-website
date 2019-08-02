@@ -1,0 +1,1331 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>配置文件解析 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="install/namespace.html" />
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">开始</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" >
+            
+                <span>
+            
+                    
+                    技术架构
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.2" data-path="config.html">
+            
+                <a href="config.html">
+            
+                    
+                    配置文件解析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="install/namespace.html">
+            
+                <a href="install/namespace.html">
+            
+                    
+                    创建新的空间
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">安装相关服务</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="install/storage.html">
+            
+                <a href="install/storage.html">
+            
+                    
+                    安装持久化存储
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="install/consul.html">
+            
+                <a href="install/consul.html">
+            
+                    
+                    安装consul集群
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="install/redis.html">
+            
+                <a href="install/redis.html">
+            
+                    
+                    安装单点redis
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="install/rabbitmq.html">
+            
+                <a href="install/rabbitmq.html">
+            
+                    
+                    安装单点rabbitMQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="install/mysql.html">
+            
+                <a href="install/mysql.html">
+            
+                    
+                    安装单点mysql
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="install/elk.html">
+            
+                <a href="install/elk.html">
+            
+                    
+                    安装ELK
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7" >
+            
+                <span>
+            
+                    
+                    安装Prometheus
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8" data-path="install/jenkins.html">
+            
+                <a href="install/jenkins.html">
+            
+                    
+                    安装Jenkins
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.9" data-path="install/kpaas.html">
+            
+                <a href="install/kpaas.html">
+            
+                    
+                    安装kplcloud
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">开始</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="jenkins.html">
+            
+                <a href="jenkins.html">
+            
+                    
+                    jenkins及git的SSHKey配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">使用</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" >
+            
+                <span>
+            
+                    
+                    登陆
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" >
+            
+                <span>
+            
+                    
+                    模版管理
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" >
+            
+                <span>
+            
+                    
+                    Webhooks功能使用
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.4" >
+            
+                <span>
+            
+                    
+                    绑定微信消息推送
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.5" >
+            
+                <span>
+            
+                    
+                    定时任务
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.6" >
+            
+                <span>
+            
+                    
+                    各个语言的应用部署
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.7" >
+            
+                <span>
+            
+                    
+                    工具集
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.8" >
+            
+                <span>
+            
+                    
+                    自己定义Hosts
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.9" >
+            
+                <span>
+            
+                    
+                    自定义启动命令
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.10" >
+            
+                <span>
+            
+                    
+                    消息订阅
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.11" >
+            
+                <span>
+            
+                    
+                    日志采集及kibana使用
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.12" >
+            
+                <span>
+            
+                    
+                    配置自动构建
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.13" >
+            
+                <span>
+            
+                    
+                    流量镜像功能配置
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.13.1" data-path="start/create-golang-app.html">
+            
+                <a href="start/create-golang-app.html">
+            
+                    
+                    部署一个Golang语言应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.13.2" >
+            
+                <span>
+            
+                    
+                    部署一个Java语言应用
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.13.3" >
+            
+                <span>
+            
+                    
+                    部署一个NodeJS语言应用
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.13.4" >
+            
+                <span>
+            
+                    
+                    部署一个Python语言应用
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.13.5" >
+            
+                <span>
+            
+                    
+                    部署一个静态文件服务
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5.14" >
+            
+                <span>
+            
+                    
+                    组权限操作说明
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.15" >
+            
+                <span>
+            
+                    
+                    配置中心consul使用
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >配置文件解析</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="appcfg-&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x89E3;&#x6790;">app.cfg &#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x89E3;&#x6790;</h1>
+<blockquote>
+<p>&#x672C;&#x6587;&#x4E3B;&#x8981;&#x4ECB;&#x7ECD;app.cfg&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x7684;&#x914D;&#x7F6E;&#x53CA;&#x4E00;&#x4E9B;&#x53C2;&#x6570;&#x7684;&#x89E3;&#x91CA;</p>
+</blockquote>
+<p>kplcloud&#x542F;&#x52A8;&#x65F6;&#x5FC5;&#x987B;&#x4F20;<code>app.cfg</code>&#x6587;&#x4EF6;&#xFF0C;&#x6240;&#x6709;&#x7684;&#x53C2;&#x6570;&#x90FD;&#x901A;&#x8FC7;&#x8BE5;&#x6587;&#x4EF6;&#x8FDB;&#x884C;&#x63A7;&#x5236;&#xFF0C;&#x82E5;&#x60A8;&#x662F;&#x5728;kubernetes&#x8FDB;&#x884C;&#x90E8;&#x7F72;&#x53EF;&#x4EE5;&#x8003;&#x8651;&#x901A;&#x8FC7;ConfigMap&#x7684;&#x65B9;&#x5F0F;&#x6302;&#x8F7D;&#x8FDB;&#x5BB9;&#x5668;&#x91CC;&#x3002;</p>
+<h2 id="server-&#x5E94;&#x7528;&#x914D;&#x7F6E;">[server] &#x5E94;&#x7528;&#x914D;&#x7F6E;</h2>
+<table>
+<thead>
+<tr>
+<th>&#x5B57;&#x6BB5;</th>
+<th>&#x5907;&#x6CE8;</th>
+<th>&#x5176;&#x4ED6;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>http_static</td>
+<td>&#x9759;&#x6001;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;</td>
+<td>./static/</td>
+</tr>
+<tr>
+<td>http_proxy</td>
+<td>&#x4EE3;&#x7406;&#x670D;&#x52A1;&#x5730;&#x5740;</td>
+<td>&#x5982;&#x679C;&#x60A8;&#x7684;&#x73AF;&#x5883;&#x662F;&#x9694;&#x79BB;&#x7684;&#xFF0C;&#x53C8;&#x9700;&#x8981;&#x8BBF;&#x95EE;&#x5916;&#x7F51;&#x7684;&#x8BDD;&#x5C31;&#x586B;&#x5199;</td>
+</tr>
+<tr>
+<td>logs_path</td>
+<td>&#x65E5;&#x5FD7;&#x6587;&#x4EF6;&#x76EE;&#x5F55;</td>
+<td>&#x5982;&#x679C;&#x586B;&#x5199;&#x7531;&#x4F1A;&#x8F93;&#x51FA;&#x65E5;&#x5FD7;&#x6587;&#x4EF6;&#x5230;&#x6307;&#x5B9A;&#x76EE;&#x5F55;</td>
+</tr>
+<tr>
+<td>upload_path</td>
+<td>&#x4E0A;&#x4F20;&#x6587;&#x4EF6;&#x7684;&#x8DEF;&#x5F84;</td>
+<td>&#x5982;&#x679C;&#x9700;&#x8981;&#x6301;&#x4E45;&#x5316;&#x8BF7;&#x914D;&#x7F6E;pvc</td>
+</tr>
+<tr>
+<td>domain</td>
+<td>&#x7F51;&#x7AD9;&#x57DF;&#x540D;</td>
+<td>kplcloud.kpaas.nsini.com</td>
+</tr>
+<tr>
+<td>login_type</td>
+<td>&#x767B;&#x9646;&#x7684;&#x7C7B;&#x578B;</td>
+<td>1. ldap &#x9700;&#x8981;&#x5728;&#x4E0B;&#x9762;&#x7684; [ldap] &#x586B;&#x5199;&#x76F8;&#x5173;&#x7684;ldap&#x5730;&#x5740;&#x53CA;&#x914D;&#x7F6E;&#x4FE1;&#x606F;  2. email &#x90AE;&#x7BB1;&#x767B;&#x9646;</td>
+</tr>
+<tr>
+<td>consul_kv</td>
+<td>&#x662F;&#x5426;&#x542F;&#x7528;consul&#x4F5C;&#x4E3A;&#x914D;&#x7F6E;&#x4E2D;&#x5FC3;,&#x5E76;&#x53EF;&#x5728;&#x8BE5;&#x5E73;&#x53F0;&#x8FDB;&#x884C;kv&#x7684;&#x64CD;&#x4F5C;</td>
+<td>false</td>
+</tr>
+<tr>
+<td>app_key</td>
+<td>&#x7528;&#x4F5C;&#x52A0;&#x5BC6;&#x89E3;&#x5BC6;&#x4F7F;&#x7528;&#x7684;key</td>
+<td></td>
+</tr>
+<tr>
+<td>session_timeout</td>
+<td>&#x767B;&#x9646;&#x8D85;&#x65F6;&#x7684;&#x65F6;&#x95F4;</td>
+<td>7200 &#x5355;&#x4F4D;&#x79D2;</td>
+</tr>
+<tr>
+<td>kibana_url</td>
+<td>kibana &#x5730;&#x5740;</td>
+<td></td>
+</tr>
+<tr>
+<td>transfer_url</td>
+<td>tracing &#x5730;&#x5740;</td>
+<td></td>
+</tr>
+<tr>
+<td>grafana_url</td>
+<td>grafana&#x5730;&#x5740;</td>
+<td></td>
+</tr>
+<tr>
+<td>heapster_url</td>
+<td>heapster&#x5730;&#x5740;</td>
+<td>k8s&#x7684;cpu&#x3001;&#x5185;&#x5B58;&#x7B49;&#x76D1;&#x63A7;&#x6570;&#x636E;&#x4ECE;&#x8FD9;&#x91CC;&#x62FF;</td>
+</tr>
+<tr>
+<td>prometheus_url</td>
+<td>prometheus&#x5730;&#x5740;</td>
+<td>&#x5176;&#x4ED6;&#x76D1;&#x63A7;&#x6570;&#x636E;&#x83B7;&#x53D6;&#x6E90;</td>
+</tr>
+<tr>
+<td>docker_repo</td>
+<td>&#x60A8;&#x7684;&#x955C;&#x50CF;&#x4ED3;&#x5E93;&#x5730;&#x5740;</td>
+<td>&#x4F8B;&#x5982;: hub.docker.com</td>
+</tr>
+<tr>
+<td>service_mesh</td>
+<td>&#x662F;&#x5426;&#x542F;&#x7528;servicemesh&#x529F;&#x80FD;</td>
+<td>&#x76EE;&#x524D;&#x517C;&#x5BB9;istio</td>
+</tr>
+<tr>
+<td>domain_suffix</td>
+<td>&#x751F;&#x6210;&#x7684;ingress&#x7684;&#x540E;&#x7F00;</td>
+<td>&#x4F8B;&#x5982;: .kpaas.nsini.com</td>
+</tr>
+</tbody>
+</table>
+<h2 id="cors-&#x8DE8;&#x57DF;&#x8BBE;&#x7F6E;">[cors] &#x8DE8;&#x57DF;&#x8BBE;&#x7F6E;</h2>
+<table>
+<thead>
+<tr>
+<th>&#x5B57;&#x6BB5;</th>
+<th>&#x5907;&#x6CE8;</th>
+<th>&#x5176;&#x4ED6;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>allow</td>
+<td>&#x662F;&#x5426;&#x5141;&#x8BB8;&#x8DE8;&#x57DF;&#x8BF7;&#x6C42;</td>
+<td>false</td>
+</tr>
+<tr>
+<td>origin</td>
+<td>&#x5141;&#x8BB8;&#x8DE8;&#x57DF;&#x7684;&#x5730;&#x5740;</td>
+<td>&#x4E0D;&#x80FD;&#x76F4;&#x63A5;&#x5199; &quot;*&quot;</td>
+</tr>
+<tr>
+<td>methods</td>
+<td>&#x5141;&#x8BB8;&#x8DE8;&#x57DF;&#x7684;&#x65B9;&#x6CD5;</td>
+<td></td>
+</tr>
+<tr>
+<td>headers</td>
+<td>&#x5141;&#x8BB8;&#x8DE8;&#x57DF;&#x7684;header&#x5934;&#x4FE1;&#x606F;</td>
+</tr>
+</tbody>
+</table>
+<h2 id="mysql-mysql&#x914D;&#x7F6E;">[mysql] mysql&#x914D;&#x7F6E;</h2>
+<table>
+<thead>
+<tr>
+<th>&#x5B57;&#x6BB5;</th>
+<th>&#x5907;&#x6CE8;</th>
+<th>&#x5176;&#x4ED6;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>mysql_host</td>
+<td>&#x6570;&#x636E;&#x5E93;&#x5730;&#x5740;</td>
+<td>mysql</td>
+</tr>
+<tr>
+<td>mysql_port</td>
+<td>&#x6570;&#x636E;&#x5E93;&#x7AEF;&#x53E3;</td>
+<td>3306</td>
+</tr>
+<tr>
+<td>mysql_user</td>
+<td>&#x6570;&#x636E;&#x5E93;&#x7528;&#x6237;&#x540D;</td>
+<td></td>
+</tr>
+<tr>
+<td>mysql_password</td>
+<td>&#x6570;&#x636E;&#x5E93;&#x5BC6;&#x7801;</td>
+<td></td>
+</tr>
+<tr>
+<td>mysql_database</td>
+<td>&#x6570;&#x636E;&#x5E93;&#x540D;</td>
+<td>kplcloud</td>
+</tr>
+<tr>
+<td>mysql_debug</td>
+<td>&#x662F;&#x5426;&#x5F00;&#x542F;debug&#x4FE1;&#x606F;</td>
+<td>false</td>
+</tr>
+</tbody>
+</table>
+<h2 id="redis-redis&#x914D;&#x7F6E;">[redis] redis&#x914D;&#x7F6E;</h2>
+<table>
+<thead>
+<tr>
+<th>&#x5B57;&#x6BB5;</th>
+<th>&#x5907;&#x6CE8;</th>
+<th>&#x5176;&#x4ED6;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>redis_drive</td>
+<td>redis&#x9A71;&#x52A8;</td>
+<td>1. cluster: &#x82E5;&#x4E3A;&#x8BE5;&#x503C;, &#x5219;&#x8BBF;&#x95EE;redis&#x96C6;&#x7FA4;;  2. single: &#x82E5;&#x4E3A;&#x8BE5;&#x503C;, &#x5219;&#x8BBF;&#x95EE;&#x5355;&#x70B9;redis&#x670D;&#x52A1;</td>
+</tr>
+<tr>
+<td>redis_hosts</td>
+<td>redis&#x5730;&#x5740;</td>
+<td>redis IP &#x5730;&#x5740;, &#x82E5;redis_drive&#x4E3A;cluster,&#x5219;redis_hosts&#x9700;&#x8981;&#x591A;&#x4E2A;IP&#x7528;&quot;;&quot;&#x9694;&#x5F00;&#x4F8B;&#x5982; redis-0:6379;redis-1:6379;redis-2:6379</td>
+</tr>
+<tr>
+<td>mysql_user</td>
+<td>redis&#x8FDE;&#x63A5;&#x7528;&#x6237;&#x540D;</td>
+<td></td>
+</tr>
+<tr>
+<td>redis_password</td>
+<td>redis&#x5E93;&#x5BC6;&#x7801;</td>
+<td></td>
+</tr>
+<tr>
+<td>redis_db</td>
+<td>redisDB</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<p><del>## [kubernetes] &#x914D;&#x7F6E;</del> </p>
+<h2 id="jenkins-jenkins&#x914D;&#x7F6E;">[jenkins] jenkins&#x914D;&#x7F6E;</h2>
+<table>
+<thead>
+<tr>
+<th>&#x5B57;&#x6BB5;</th>
+<th>&#x5907;&#x6CE8;</th>
+<th>&#x5176;&#x4ED6;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>host</td>
+<td>jenkins&#x5730;&#x5740;</td>
+<td>&#x5982;: <a href="http://jenkins:8080" target="_blank">http://jenkins:8080</a></td>
+</tr>
+<tr>
+<td>token</td>
+<td>&#x8FDE;&#x63A5;jenkins&#x7684;token</td>
+<td></td>
+</tr>
+<tr>
+<td>user</td>
+<td>&#x6784;&#x5EFA;&#x7684;&#x7528;&#x6237;</td>
+<td>&#x6267;&#x884C;&#x76F8;&#x5173;jenkins&#x4EFB;&#x52A1;&#x7684;&#x7528;&#x6237;</td>
+</tr>
+<tr>
+<td>credentials_id</td>
+<td>&#x5B89;&#x5168;token</td>
+<td>&#x8BBF;&#x95EE;jenkins&#x7684;&#x51ED;&#x636E;, &#x53EF;&#x4EE5;&#x5728;jenkins&#x7684; credentials-&gt;system-&gt;domain&#x8FDB;&#x884C;&#x914D;&#x7F6E;&#x6216;&#x521B;&#x5EFA;</td>
+</tr>
+</tbody>
+</table>
+<h2 id="consul-consul&#x914D;&#x7F6E;">[consul] consul&#x914D;&#x7F6E;</h2>
+<table>
+<thead>
+<tr>
+<th>&#x5B57;&#x6BB5;</th>
+<th>&#x5907;&#x6CE8;</th>
+<th>&#x5176;&#x4ED6;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>consul_token</td>
+<td>consul acl token</td>
+<td></td>
+</tr>
+<tr>
+<td>consul_addr</td>
+<td>consul&#x5730;&#x5740;</td>
+<td>&#x5982;: consul:8500</td>
+</tr>
+</tbody>
+</table>
+<h2 id="amqp-rabbitmq&#x914D;&#x7F6E;">[amqp] RabbitMq&#x914D;&#x7F6E;</h2>
+<table>
+<thead>
+<tr>
+<th>&#x5B57;&#x6BB5;</th>
+<th>&#x5907;&#x6CE8;</th>
+<th>&#x5176;&#x4ED6;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>url</td>
+<td>&#x5730;&#x5740;</td>
+<td>&#x5982;: amqp://kplcloud:kplcloud@rabbitmq:5672/kplcloud</td>
+</tr>
+<tr>
+<td>exchange</td>
+<td>consul&#x5730;&#x5740;</td>
+<td>&#x5982;: direct</td>
+</tr>
+<tr>
+<td>exchange_type</td>
+<td></td>
+<td>&#x5982;: kplcloud-exchange</td>
+</tr>
+<tr>
+<td>routing_key</td>
+<td></td>
+<td>&#x5982;: kplcloud</td>
+</tr>
+</tbody>
+</table>
+<h2 id="git-git-&#x4ED3;&#x5E93;&#x914D;&#x7F6E;">[git] git &#x4ED3;&#x5E93;&#x914D;&#x7F6E;</h2>
+<table>
+<thead>
+<tr>
+<th>&#x5B57;&#x6BB5;</th>
+<th>&#x5907;&#x6CE8;</th>
+<th>&#x5176;&#x4ED6;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>git_type</td>
+<td>git&#x4ED3;&#x5E93;&#x7C7B;&#x578B;</td>
+<td>1. gitlab: &#x4F7F;&#x7528;&#x5185;&#x90E8;&#x81EA;&#x5EFA;&#x7684;gitlab gitlab&#x7684;&#x7248;&#x672C;&#x9700;&#x8981;&#x652F;&#x6301;v3 api,&#x5982;&#x679C;&#x4E0D;&#x652F;&#x6301; &#x60A8;&#x53EF;&#x4EE5;&#x81EA;&#x5DF1;&#x884C;&#x52A0;&#x8F7D;&#x5E94;&#x7528;&#x7684;package  2. github: &#x4F7F;&#x7528;&#x516C;&#x5171;&#x7684;github</td>
+</tr>
+<tr>
+<td>git_addr</td>
+<td>&#x8FDE;&#x4E0D;&#x77E5;gitlab&#x6216;github&#x7684;API&#x5730;&#x5740;</td>
+<td>&#x5982;: <a href="https://gitlab.com" target="_blank">https://gitlab.com</a> &#x6216; gitlab.com</td>
+</tr>
+<tr>
+<td>token</td>
+<td>&#x8FDE;&#x63A5;gitlab&#x6216;github&#x7684;token</td>
+<td>&#x8BBF;&#x95EE;&#x76F8;&#x5173;git&#x7684;token &#x9700;&#x8981;&#x6240;&#x6709;&#x9879;&#x76EE;&#x7684;clone&#x6743;&#x9650;</td>
+</tr>
+<tr>
+<td>client_id</td>
+<td>consul&#x5730;&#x5740;</td>
+<td>&#x5982;: github-api &#x5982;&#x679C;&#x4F7F;&#x7528;&#x7684;&#x662F;github &#x7531;&#x9700;&#x8981;&#x7528;&#x8FD9;&#x4E2A;&#x5728;<a href="https://github.com/settings/developers&#x4E0A;&#x67E5;&#x627E;" target="_blank">https://github.com/settings/developers&#x4E0A;&#x67E5;&#x627E;</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="email-&#x90AE;&#x7BB1;&#x914D;&#x7F6E;">[email] &#x90AE;&#x7BB1;&#x914D;&#x7F6E;</h2>
+<table>
+<thead>
+<tr>
+<th>&#x5B57;&#x6BB5;</th>
+<th>&#x5907;&#x6CE8;</th>
+<th>&#x5176;&#x4ED6;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>smtp_user</td>
+<td>&#x53D1;&#x9001;&#x90AE;&#x7BB1;</td>
+<td></td>
+</tr>
+<tr>
+<td>smtp_password</td>
+<td>&#x5BC6;&#x7801;</td>
+<td></td>
+</tr>
+<tr>
+<td>smtp_host</td>
+<td>&#x670D;&#x52A1;&#x7AEF;smtp &#x5730;&#x5740;</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>&#x90AE;&#x7BB1;&#x4F7F;&#x7528;&#x7684;&#x662F;&#x516C;&#x53F8;&#x90AE;&#x7BB1;&#xFF0C;&#x6709;&#x76F8;&#x5E94;&#x7528;API&#x7684;,&#x628A;src/email/client:EmailInterface &#x5B9E;&#x73B0;&#x4E00;&#x904D;&#x5C31;&#x597D;</p>
+</blockquote>
+<h2 id="ldap-ldap&#x914D;&#x7F6E;">[ldap] LDAP&#x914D;&#x7F6E;</h2>
+<table>
+<thead>
+<tr>
+<th>&#x5B57;&#x6BB5;</th>
+<th>&#x5907;&#x6CE8;</th>
+<th>&#x5176;&#x4ED6;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ldap_host</td>
+<td>ldap&#x5730;&#x5740;</td>
+<td></td>
+</tr>
+<tr>
+<td>ldap_port</td>
+<td>ldap&#x7AEF;&#x53E3;</td>
+<td></td>
+</tr>
+<tr>
+<td>ldap_base</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ldap_sseSSL</td>
+<td>&#x662F;&#x5426;ssl</td>
+<td></td>
+</tr>
+<tr>
+<td>ldap_bindDN</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ldap_bind_password</td>
+<td>&#x7ED1;&#x5B9A;&#x5BC6;&#x7801;</td>
+<td></td>
+</tr>
+<tr>
+<td>ldap_user_filter</td>
+<td>&#x8FC7;&#x6EE4;&#x7528;&#x6237;</td>
+<td>(userPrincipalName=%s)</td>
+</tr>
+<tr>
+<td>ldap_group_filter</td>
+<td>&#x8FC7;&#x6EE4;&#x7EC4;</td>
+<td>(&amp;(objectCategory=Group))</td>
+</tr>
+<tr>
+<td>ldap_attr</td>
+<td>&#x9700;&#x8981;&#x8FD4;&#x56DE;&#x7684;&#x5B57;&#x6BB5;</td>
+<td>name;email</td>
+</tr>
+</tbody>
+</table>
+<h2 id="wechat-&#x5FAE;&#x4FE1;&#x76F8;&#x5173;&#x914D;&#x7F6E;">[wechat] &#x5FAE;&#x4FE1;&#x76F8;&#x5173;&#x914D;&#x7F6E;</h2>
+<table>
+<thead>
+<tr>
+<th>&#x5B57;&#x6BB5;</th>
+<th>&#x5907;&#x6CE8;</th>
+<th>&#x5176;&#x4ED6;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>app_id</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>app_secret</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>token</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>encoding_aes_key</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="msg-&#x6D88;&#x606F;&#x63A8;&#x9001;&#x914D;&#x7F6E;">[msg] &#x6D88;&#x606F;&#x63A8;&#x9001;&#x914D;&#x7F6E;</h2>
+<table>
+<thead>
+<tr>
+<th>&#x5B57;&#x6BB5;</th>
+<th>&#x5907;&#x6CE8;</th>
+<th>&#x5176;&#x4ED6;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>alarm_default_email</td>
+<td>&#x7CFB;&#x7EDF;&#x544A;&#x8B66;&#x9ED8;&#x8BA4;&#x53D1;&#x9001;&#x7684;&#x4EBA;&#x5458;</td>
+<td>solacowa@gmail.com;i@lattecake.com</td>
+</tr>
+</tbody>
+</table>
+<h2 id="&#x5B8C;&#x6210;&#x7684;appcfg">&#x5B8C;&#x6210;&#x7684;app.cfg</h2>
+<pre><code class="lang-ini">
+
+<span class="hljs-comment">; [server]</span>
+<span class="hljs-comment">; &#x8BE5;&#x670D;&#x52A1;&#x542F;&#x52A8;&#x7684;&#x76F8;&#x5173;&#x53C2;&#x6570;</span>
+<span class="hljs-comment">; http_static: &#x9759;&#x6001;&#x6587;&#x4EF6;&#x76EE;&#x5F55;, &#x524D;&#x7AEF;&#x7684;&#x6587;&#x4EF6;&#x4F1A;&#x653E;&#x5728;&#x8FD9;&#x91CC;</span>
+<span class="hljs-comment">; http_proxy: &#x4EE3;&#x7406;&#x670D;&#x52A1;&#x5730;&#x5740;&#x5982;&#x679C;&#x9700;&#x8981;&#x7684;&#x8BDD;&#x5C31;&#x586B;</span>
+<span class="hljs-comment">; logs_path: &#x65E5;&#x5FD7;&#x6587;&#x4EF6;&#x76EE;&#x5F55;</span>
+<span class="hljs-comment">; upload_path: &#x6587;&#x4EF6;&#x4E0A;&#x4F20;&#x76EE;&#x5F55;</span>
+<span class="hljs-comment">; domain: &#x8BBF;&#x95EE;&#x57DF;&#x540D;</span>
+<span class="hljs-comment">; login_type: &#x767B;&#x9646;&#x7C7B;&#x578B;</span>
+<span class="hljs-comment">;   1. ldap &#x9700;&#x8981;&#x5728;&#x4E0B;&#x9762;&#x7684; [ldap] &#x586B;&#x5199;&#x76F8;&#x5173;&#x7684;ldap&#x5730;&#x5740;&#x53CA;&#x914D;&#x7F6E;&#x4FE1;&#x606F;</span>
+<span class="hljs-comment">;   2. email &#x90AE;&#x7BB1;&#x767B;&#x9646;</span>
+<span class="hljs-comment">; consul_kv: &#x662F;&#x5426;&#x542F;consul kv&#x529F;&#x80FD;, &#x5982;&#x679C;&#x542F;&#x7528;, &#x5C06;&#x53EF;&#x4EE5;&#x5728;&#x5E73;&#x53F0;&#x4E0A;&#x64CD;&#x4F5C;consul kv</span>
+<span class="hljs-comment">; app_key: &#x901A;&#x5E38;&#x7528;&#x6765;&#x52A0;&#x5BC6;&#x4F7F;&#x7528;</span>
+<span class="hljs-comment">; session_timeout: sesstion&#x65F6;&#x957F;, &#x5355;&#x4F4D;&#x79D2;</span>
+<span class="hljs-comment">; kibana_url: kibanba&#x5730;&#x5740;</span>
+<span class="hljs-comment">; grafana_url: grafana&#x5730;&#x5740;</span>
+<span class="hljs-comment">; heapster_url: heapster &#x5730;&#x5740;</span>
+<span class="hljs-comment">; prometheus_url: prometheus&#x5730;&#x5740; http://prometheus.kube-system:9090</span>
+<span class="hljs-comment">; docker_repo: &#x60A8;&#x7684;&#x955C;&#x50CF;&#x4ED3;&#x5E93;&#x5730;&#x5740;</span>
+<span class="hljs-section">[server]</span>
+<span class="hljs-attr">app_name</span> = kplcloud
+<span class="hljs-attr">http_static</span> = ./static/
+<span class="hljs-attr">http_proxy</span> =
+<span class="hljs-comment">;logs_path = </span>
+<span class="hljs-attr">upload_path</span> = /tmp/kpaas/upload
+<span class="hljs-attr">domain</span> = https://kplcloud.nsini.com/
+<span class="hljs-attr">login_type</span> = email
+<span class="hljs-attr">consul_kv</span> = <span class="hljs-literal">true</span>
+<span class="hljs-attr">app_key</span> = <span class="hljs-number">6</span>&amp;<span class="hljs-number">2</span>*&amp;^<span class="hljs-number">0</span>Ypagc91iajsdf
+<span class="hljs-attr">session_timeout</span> = <span class="hljs-number">7200</span>
+<span class="hljs-attr">kibana_url</span> = http://kibana.kpaas.nsini.com
+<span class="hljs-attr">transfer_url</span> = http://tracing.kpaas.nsini.com
+<span class="hljs-attr">grafana_url</span> = http://grafana.kpaas.nsini.com
+<span class="hljs-attr">prometheus_url</span> = http://prometheus.kube-system:<span class="hljs-number">9090</span>
+<span class="hljs-attr">heapster_url</span> = http://heapster.kube-system
+<span class="hljs-attr">docker_repo</span> = hub.kpaas.nsini.com
+<span class="hljs-attr">service_mesh</span> = <span class="hljs-literal">false</span>
+<span class="hljs-attr">domain_suffix</span> = %s.%s.nsini.com
+
+<span class="hljs-comment">; [cors]</span>
+<span class="hljs-comment">; &#x4E3B;&#x8981;&#x662F;&#x8BA9;&#x670D;&#x52A1;&#x7AEF;&#x652F;&#x6301;&#x8DE8;&#x57DF;&#x8BF7;&#x6C42;</span>
+<span class="hljs-comment">; allow: &#x662F;&#x5426;&#x652F;&#x6301;&#x8DE8;&#x57DF;&#x8BF7;&#x6C42;</span>
+<span class="hljs-comment">; origin: Access-Control-Allow-Origin</span>
+<span class="hljs-comment">; methods: Access-Control-Allow-Methods</span>
+<span class="hljs-comment">; headers: Access-Control-Allow-Headers</span>
+<span class="hljs-section">[cors]</span>
+<span class="hljs-attr">allow</span> = <span class="hljs-literal">false</span>
+<span class="hljs-attr">origin</span> = http://localhost:<span class="hljs-number">8000</span>
+<span class="hljs-attr">methods</span> = GET,POST,OPTIONS,PUT,DELETE
+<span class="hljs-attr">headers</span> = Origin,Content-Type,Authorization,x-requested-with,Access-Control-Allow-Origin,Access-Control-Allow-Credentials
+
+
+<span class="hljs-comment">; [mysql]</span>
+<span class="hljs-comment">; mysql&#x76F8;&#x5173;&#x7684;&#x914D;&#x7F6E;, &#x5982;&#x4E0B;&#x6240;&#x793A;, &#x5C31;&#x4E0D;&#x9700;&#x8981;&#x8FC7;&#x591A;&#x89E3;&#x91CA;&#x4E86;</span>
+<span class="hljs-comment">; mysql_host: mysql</span>
+<span class="hljs-comment">; mysql_port: 3306</span>
+<span class="hljs-comment">; mysql_user: root</span>
+<span class="hljs-comment">; mysql_password: admin</span>
+<span class="hljs-comment">; mysql_database: kplcloud</span>
+<span class="hljs-comment">; mysql_de<span class="hljs-doctag">bug:</span> false</span>
+<span class="hljs-section">[mysql]</span>
+<span class="hljs-attr">mysql_host</span> = mysql
+<span class="hljs-attr">mysql_port</span> = <span class="hljs-number">3306</span>
+<span class="hljs-attr">mysql_user</span> = root
+<span class="hljs-attr">mysql_password</span> = admin
+<span class="hljs-attr">mysql_database</span> = kplcloud
+<span class="hljs-attr">mysql_debug</span> = <span class="hljs-literal">false</span>
+<span class="hljs-comment">;mysql_timeout = 20m</span>
+<span class="hljs-comment">;mysql_charset = utf8mb4</span>
+
+
+<span class="hljs-comment">; [redis]</span>
+<span class="hljs-comment">; redis&#x53EF;&#x914D;&#x96C6;&#x7FA4;&#x8BBF;&#x95EE;&#x548C;&#x5355;&#x70B9;&#x8BBF;&#x95EE;</span>
+<span class="hljs-comment">; redis_drive:</span>
+<span class="hljs-comment">;   1. cluster: &#x82E5;&#x4E3A;&#x8BE5;&#x503C;, &#x5219;&#x8BBF;&#x95EE;redis&#x96C6;&#x7FA4;</span>
+<span class="hljs-comment">;   2. single: &#x82E5;&#x4E3A;&#x8BE5;&#x503C;, &#x5219;&#x8BBF;&#x95EE;&#x5355;&#x70B9;redis&#x670D;&#x52A1;</span>
+<span class="hljs-comment">; redis_hosts: redis IP &#x5730;&#x5740;(redis:6379), &#x82E5;redis_drive&#x4E3A;cluster,&#x5219;redis_hosts&#x9700;&#x8981;&#x591A;&#x4E2A;IP&#x7528;&quot;;&quot;&#x9694;&#x5F00;</span>
+<span class="hljs-comment">; redis_password: redis auth &#x5BC6;&#x7801;</span>
+<span class="hljs-comment">; redis_db: &#x5728;redis_drive&#x4E3A;cluster&#x7684;&#x60C5;&#x51B5;&#x4E0B; redis_db &#x4E0D;&#x9700;&#x8981;&#x8BBE;&#x7F6E;</span>
+<span class="hljs-section">[redis]</span>
+<span class="hljs-attr">redis_drive</span> = single
+<span class="hljs-attr">redis_hosts</span> = redis:<span class="hljs-number">6379</span>
+<span class="hljs-attr">redis_password</span> =
+<span class="hljs-attr">redis_db</span> = <span class="hljs-number">0</span>
+<span class="hljs-section">
+[kubernetes]</span>
+<span class="hljs-attr">image_pull_secrets</span> = regcred
+
+<span class="hljs-comment">; [jenkins]</span>
+<span class="hljs-comment">; host: jenins &#x5730;&#x5740;, &#x5982;: http://jenkins.devops.idc</span>
+<span class="hljs-comment">; token:</span>
+<span class="hljs-comment">; user: &#x6267;&#x884C;&#x76F8;&#x5173;jenkins&#x4EFB;&#x52A1;&#x7684;&#x7528;&#x6237;</span>
+<span class="hljs-comment">; credentials_id: &#x8BBF;&#x95EE;jenkins&#x7684;&#x51ED;&#x636E;, &#x53EF;&#x4EE5;&#x5728;jenkins&#x7684; credentials/store/system/domain/_/credential&#x8FDB;&#x884C;&#x914D;&#x7F6E;&#x6216;&#x521B;&#x5EFA;</span>
+<span class="hljs-section">[jenkins]</span>
+<span class="hljs-attr">host</span> = http://jenkins.kpaas.nsini.com/
+<span class="hljs-attr">token</span> = <span class="hljs-number">118</span>d03c07ccab3e137f0f0491cb05aac87
+<span class="hljs-attr">user</span> = admin
+<span class="hljs-attr">credentials_id</span> = <span class="hljs-number">5</span>c99ccc1-<span class="hljs-number">80</span>bd-<span class="hljs-number">4</span>c7c-a711-ed7879a6beb4
+
+<span class="hljs-comment">; [consul]</span>
+<span class="hljs-comment">; consul_token: &#x8FDE;&#x63A5;consul&#x7684; token</span>
+<span class="hljs-comment">; consul_addr: consul&#x5730;&#x5740; http://consul:8500</span>
+<span class="hljs-section">[consul]</span>
+<span class="hljs-attr">consul_token</span> = <span class="hljs-number">398073</span>a8-<span class="hljs-number">5091</span>-<span class="hljs-number">4</span>d9c-<span class="hljs-number">871</span>a-bbbeb030d1f6
+<span class="hljs-attr">consul_addr</span> = http://consul:<span class="hljs-number">8500</span>
+
+<span class="hljs-comment">; [amqp]</span>
+<span class="hljs-comment">; url: rabbitmq&#x7684;&#x5730;&#x5740; amqp://kplcloud:kplcloud@rabbitmq:5672/kplcloud</span>
+<span class="hljs-comment">; exchange: direct</span>
+<span class="hljs-comment">; exchange_type: kplcloud-exchange</span>
+<span class="hljs-comment">; routing_key: kplcloud</span>
+<span class="hljs-section">[amqp]</span>
+<span class="hljs-attr">url</span> = amqp://kplcloud:kplcloud@rabbitmq:<span class="hljs-number">5672</span>/kplcloud
+<span class="hljs-attr">exchange</span> = direct
+<span class="hljs-attr">exchange_type</span> = kplcloud
+<span class="hljs-attr">routing_key</span> = kplcloud
+
+<span class="hljs-comment">; [git]</span>
+<span class="hljs-comment">; git_type:</span>
+<span class="hljs-comment">;   1. gitlab: &#x4F7F;&#x7528;&#x5185;&#x90E8;&#x81EA;&#x5EFA;&#x7684;gitlab gitlab&#x7684;&#x7248;&#x672C;&#x9700;&#x8981;&#x652F;&#x6301;v3 api,&#x5982;&#x679C;&#x4E0D;&#x652F;&#x6301; &#x60A8;&#x53EF;&#x4EE5;&#x81EA;&#x5DF1;&#x884C;&#x52A0;&#x8F7D;&#x5E94;&#x7528;&#x7684;package</span>
+<span class="hljs-comment">;   2. github: &#x4F7F;&#x7528;&#x516C;&#x5171;&#x7684;github</span>
+<span class="hljs-comment">; git_addr: git API&#x5730;&#x5740;, &#x4F8B;&#x5982;: http://gitlab.domain.idc/api/v4/  v3 &#x7684;API&#x6682;&#x65F6;&#x4E0D;&#x652F;&#x6301;</span>
+<span class="hljs-comment">; token: &#x8BBF;&#x95EE;&#x76F8;&#x5173;git&#x7684;token &#x9700;&#x8981;&#x6240;&#x6709;&#x57FA;&#x7840;&#x7684;clone&#x6743;&#x9650; 0d6f6bc3ecaf97fc87aa2b8bf3e7e7d27667920b</span>
+<span class="hljs-comment">; client_id:  &#x5982;&#x679C;&#x4F7F;&#x7528;&#x7684;&#x662F;github &#x7531;&#x9700;&#x8981;&#x7528;&#x8FD9;&#x4E2A;&#x5728;https://github.com/settings/developers&#x4E0A;&#x67E5;&#x627E;</span>
+<span class="hljs-section">[git]</span>
+<span class="hljs-attr">git_type</span> = gitlab
+<span class="hljs-comment">;git_addr = http://10.141.4.186</span>
+<span class="hljs-comment">;token = 1bGKBBy6prizSFSswebq</span>
+<span class="hljs-comment">;git_addr = https://gitlab.com</span>
+<span class="hljs-comment">;token = fpeYxskBEP29qzzyFu2T</span>
+<span class="hljs-attr">git_type</span> = github
+<span class="hljs-attr">token</span> = <span class="hljs-number">0</span>d6f6bc3ecaf97fc87aa2b8bf3e7e7d27667920b
+<span class="hljs-comment">;client_id = github-api</span>
+
+<span class="hljs-comment">; [email]</span>
+<span class="hljs-comment">; &#x90AE;&#x7BB1;&#x4F7F;&#x7528;&#x7684;&#x662F;&#x516C;&#x53F8;&#x90AE;&#x7BB1;&#xFF0C;&#x6709;&#x76F8;&#x5E94;&#x7528;API&#x7684;,&#x628A;src/email/client:EmailInterface &#x5B9E;&#x73B0;&#x4E00;&#x904D;&#x5C31;&#x597D;</span>
+<span class="hljs-comment">; &#x82E5;&#x4F7F;&#x7528;&#x7684;&#x662F;SMTP&#x7684;&#x8BDD;&#xFF0C;&#x914D;&#x7F6E;&#x4E0B;&#x9762;&#x76F8;&#x5173;&#x53C2;&#x6570;&#x5C31;&#x597D;</span>
+<span class="hljs-comment">;smtp_user: &#x53D1;&#x9001;&#x90AE;&#x7BB1;</span>
+<span class="hljs-comment">;smtp_password: &#x5BC6;&#x7801;</span>
+<span class="hljs-comment">;smtp_host: &#x670D;&#x52A1;&#x7AEF;smtp &#x5730;&#x5740;</span>
+<span class="hljs-section">[email]</span>
+<span class="hljs-attr">smtp_user</span> = <span class="hljs-number">123456</span>@qq.com
+<span class="hljs-attr">smtp_password</span> = ntijfenmgbppbibc
+<span class="hljs-attr">smtp_host</span> = smtp.qq.com:<span class="hljs-number">465</span>
+
+<span class="hljs-comment">; [ldap]</span>
+<span class="hljs-comment">; ldap&#x7684;&#x76F8;&#x5173;&#x914D;&#x7F6E;,&#x6839;&#x636E;&#x9700;&#x8981;&#x8C03;&#x6574;</span>
+<span class="hljs-section">[ldap]</span>
+<span class="hljs-attr">ldap_host</span> = ldap
+<span class="hljs-attr">ldap_port</span> = <span class="hljs-number">389</span>
+<span class="hljs-attr">ldap_base</span> = DC=nsini,DC=com
+<span class="hljs-attr">ldap_sseSSL</span> = <span class="hljs-literal">false</span>
+<span class="hljs-attr">ldap_bindDN</span> = hello-monitorpl
+<span class="hljs-attr">ldap_bind_password</span> = <span class="hljs-number">2019</span>PasTps!<span class="hljs-number">9</span>
+<span class="hljs-attr">ldap_user_filter</span> = (userPrincipalName=%s)
+<span class="hljs-attr">ldap_group_filter</span> = (&amp;(objectCategory=Group))
+<span class="hljs-attr">ldap_attr</span> = name;mail
+
+<span class="hljs-comment">; [wechat]</span>
+<span class="hljs-comment">; app_id: &#x5FAE;&#x4FE1;&#x516C;&#x4F17;&#x53F7;&#x7684;&#x5E94;&#x7528;ID</span>
+<span class="hljs-comment">; access_token: &#x5FAE;&#x4FE1;&#x516C;&#x4F17;&#x53F7;&#x7684;&#x5E94;&#x7528;access_token</span>
+<span class="hljs-section">[wechat]</span>
+<span class="hljs-attr">app_id</span> = wx5166a04186357a85
+<span class="hljs-attr">app_secret</span> = fcf03fae71cfee9a71fdf4af4c05b84b
+<span class="hljs-attr">token</span> = WECHATSDKGO
+<span class="hljs-attr">encoding_aes_key</span> =
+<span class="hljs-attr">cache_model</span> = file
+<span class="hljs-attr">cache_file</span> = /tmp/kpaas/cache/cache.txt
+<span class="hljs-attr">log_level</span> = <span class="hljs-number">1</span>
+<span class="hljs-attr">log_path</span> = /tmp/kpaas/log/
+<span class="hljs-attr">log_name</span> = wechat-sdk-log
+<span class="hljs-attr">log_suffix</span> = log
+
+<span class="hljs-comment">; [msg]</span>
+<span class="hljs-comment">; &#x6D88;&#x606F;&#x5206;&#x53D1;&#x4E2D;&#x5FC3;&#xFF0C;&#x9ED8;&#x8BA4;&#x63A5;&#x6536;&#x6D88;&#x606F;&#x7684;&#x7BA1;&#x7406;&#x5458;id</span>
+<span class="hljs-section">[msg]</span>
+<span class="hljs-attr">alarm_default_email</span> = solacowa@gmail.com
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                
+                <a href="install/namespace.html" class="navigation navigation-next navigation-unique" aria-label="Next page: 创建新的空间">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"配置文件解析","level":"2.2","depth":1,"next":{"title":"创建新的空间","level":"2.3","depth":1,"path":"install/namespace.md","ref":"install/namespace.md","articles":[]},"previous":{"title":"技术架构","level":"2.1","depth":1,"ref":"","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"config.md","mtime":"2019-08-02T05:43:36.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-08-02T06:03:58.676Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

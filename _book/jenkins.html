@@ -1,0 +1,726 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>jenkins及git的SSHKey配置 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="install/kpaas.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">开始</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" >
+            
+                <span>
+            
+                    
+                    技术架构
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="config.html">
+            
+                <a href="config.html">
+            
+                    
+                    配置文件解析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="install/namespace.html">
+            
+                <a href="install/namespace.html">
+            
+                    
+                    创建新的空间
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">安装相关服务</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="install/storage.html">
+            
+                <a href="install/storage.html">
+            
+                    
+                    安装持久化存储
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="install/consul.html">
+            
+                <a href="install/consul.html">
+            
+                    
+                    安装consul集群
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="install/redis.html">
+            
+                <a href="install/redis.html">
+            
+                    
+                    安装单点redis
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="install/rabbitmq.html">
+            
+                <a href="install/rabbitmq.html">
+            
+                    
+                    安装单点rabbitMQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="install/mysql.html">
+            
+                <a href="install/mysql.html">
+            
+                    
+                    安装单点mysql
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="install/elk.html">
+            
+                <a href="install/elk.html">
+            
+                    
+                    安装ELK
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7" >
+            
+                <span>
+            
+                    
+                    安装Prometheus
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8" data-path="install/jenkins.html">
+            
+                <a href="install/jenkins.html">
+            
+                    
+                    安装Jenkins
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.9" data-path="install/kpaas.html">
+            
+                <a href="install/kpaas.html">
+            
+                    
+                    安装kplcloud
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">开始</li>
+        
+        
+    
+        <li class="chapter active" data-level="4.1" data-path="jenkins.html">
+            
+                <a href="jenkins.html">
+            
+                    
+                    jenkins及git的SSHKey配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">使用</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" >
+            
+                <span>
+            
+                    
+                    登陆
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" >
+            
+                <span>
+            
+                    
+                    模版管理
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" >
+            
+                <span>
+            
+                    
+                    Webhooks功能使用
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.4" >
+            
+                <span>
+            
+                    
+                    绑定微信消息推送
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.5" >
+            
+                <span>
+            
+                    
+                    定时任务
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.6" >
+            
+                <span>
+            
+                    
+                    各个语言的应用部署
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.7" >
+            
+                <span>
+            
+                    
+                    工具集
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.8" >
+            
+                <span>
+            
+                    
+                    自己定义Hosts
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.9" >
+            
+                <span>
+            
+                    
+                    自定义启动命令
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.10" >
+            
+                <span>
+            
+                    
+                    消息订阅
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.11" >
+            
+                <span>
+            
+                    
+                    日志采集及kibana使用
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.12" >
+            
+                <span>
+            
+                    
+                    配置自动构建
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.13" >
+            
+                <span>
+            
+                    
+                    流量镜像功能配置
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.13.1" data-path="start/create-golang-app.html">
+            
+                <a href="start/create-golang-app.html">
+            
+                    
+                    部署一个Golang语言应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.13.2" >
+            
+                <span>
+            
+                    
+                    部署一个Java语言应用
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.13.3" >
+            
+                <span>
+            
+                    
+                    部署一个NodeJS语言应用
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.13.4" >
+            
+                <span>
+            
+                    
+                    部署一个Python语言应用
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.13.5" >
+            
+                <span>
+            
+                    
+                    部署一个静态文件服务
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5.14" >
+            
+                <span>
+            
+                    
+                    组权限操作说明
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.15" >
+            
+                <span>
+            
+                    
+                    配置中心consul使用
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >jenkins及git的SSHKey配置</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x914D;&#x7F6E;gitlab&#x4E0E;jenkins&#x670D;&#x52A1;&#x8BBF;&#x95EE;&#x6743;">&#x914D;&#x7F6E;gitlab&#x4E0E;jenkins&#x670D;&#x52A1;&#x8BBF;&#x95EE;&#x6743;</h1>
+<blockquote>
+<p>&#x5E94;&#x7528;&#x7684;&#x6E90;&#x7801;&#x662F;&#x901A;&#x8FC7;jenkins &#x4ECE;git &#x670D;&#x52A1;&#x5668;&#x4E0A;&#x62C9;&#x53D6;&#x5230;jenkins&#x670D;&#x52A1;&#x5668;&#x4E0A;&#x8FDB;&#x884C;&#x7F16;&#x8BD1;&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x8BA9;jenkins&#x670D;&#x52A1;&#x6709;&#x5BF9;git&#x670D;&#x52A1;&#x7684;&#x8BBF;&#x95EE;&#x6743;&#x9650;&#x3002;</p>
+<p>&#x4EE5;&#x4E0B;&#x662F;&#x4ECB;&#x7ECD;&#x5982;&#x4F55;&#x8BA9;jenkins&#x6709;&#x5BF9;gitlab&#x548C;github&#x7684;&#x8BBF;&#x95EE;&#x6743;&#x9650;&#x914D;&#x7F6E;&#x3002;</p>
+</blockquote>
+<h2 id="gitlab&#x914D;&#x7F6E;">gitlab&#x914D;&#x7F6E;</h2>
+<ol>
+<li>&#x767B;&#x9646;jenkins&#x670D;&#x52A1;&#x5668;</li>
+<li>&#x8FDB;&#x5165; <code>cd ~/.ssh/</code></li>
+<li>&#x627E;&#x5230; <code>cat id_rsa.pub</code><ul>
+<li>&#x5982;&#x679C;&#x6CA1;&#x6709;&#x8BF7;&#x6267;&#x884C;&#x4EE5;&#x4E0B;&#x547D;&#x4EE4;&#x751F;&#x6210;:</li>
+<li><code>$ ssh-keygen -o -t rsa -b 4096 -C</code></li>
+</ul>
+</li>
+<li>&#x5C06;&#x5185;&#x5BB9;&#x8D34;&#x5230;&#x4F60;&#x7684;gitlab&#x4E0A;</li>
+</ol>
+<p><img src="http://source.qiniu.cnd.nsini.com/images/2019/07/8c/43/e7/20190726-8ae0a304799c77e0e60684114388c392.jpeg?imageView2/2/w/1280/interlace/0/q/80" alt=""></p>
+<h2 id="jenkins&#x4E0A;&#x7684;&#x914D;&#x7F6E;">jenkins&#x4E0A;&#x7684;&#x914D;&#x7F6E;</h2>
+<ol>
+<li>&#x767B;&#x9646;jenkins&#x670D;&#x52A1;&#x5668;</li>
+<li>&#x8FDB;&#x5165; <code>cd ~/.ssh/</code></li>
+<li>&#x627E;&#x5230; <code>cat id_rsa</code><ul>
+<li>&#x5982;&#x679C;&#x6CA1;&#x6709;&#x8BF7;&#x6267;&#x884C;&#x4EE5;&#x4E0B;&#x547D;&#x4EE4;&#x751F;&#x6210;:</li>
+<li><code>$ ssh-keygen -o -t rsa -b 4096 -C</code></li>
+</ul>
+</li>
+</ol>
+<p>&#x8FDB;&#x5165; <a href="http://{your" target="_blank">http://{your</a> jenkins server}/credentials/store/system/domain/_/</p>
+<p><img src="http://source.qiniu.cnd.nsini.com/images/2019/07/7d/61/8b/20190726-d535f7c0a8f5be9b86b1056361c7d014.jpeg?imageView2/2/w/1280/interlace/0/q/100" alt=""></p>
+<p>&#x70B9;&#x51FB;&#x201C;&#x6DFB;&#x52A0;&#x51ED;&#x636E;&#x201D;</p>
+<p><img src="http://source.qiniu.cnd.nsini.com/images/2019/07/f8/bb/1e/20190726-0f2fda09eb0eec6514559cd2bb1f8b5f.jpeg" alt=""></p>
+<p>&#x5C06; privateKey &#x8D34;&#x5230; private Key&#x5757;&#x4E2D;&#xFF0C;&#x8FD9;&#x6837;jenkins&#x670D;&#x52A1;&#x5668;&#x5C31;&#x53EF;&#x4EE5;&#x8BBF;&#x95EE;&#x5230;gitlab&#x670D;&#x52A1;&#x4E86;&#x3002;</p>
+<h2 id="&#x5B89;&#x88C5;maven">&#x5B89;&#x88C5;maven</h2>
+<p>java &#x5E94;&#x7528;&#x6784;&#x5EFA;&#x9700;&#x8981;&#x5B89;&#x88C5;maven &#x63D2;&#x4EF6;</p>
+<p><img src="http://source.qiniu.cnd.nsini.com/images/2019/07/20/a7/1d/20190726-8ea71c8c5b09d7701d69587da7820466.jpeg?imageView2/2/w/1280/interlace/0/q/100" alt=""></p>
+<p>&#x641C;&#x7D22; maven &#x63D2;&#x4EF6;&#xFF0C;&#x52FE;&#x9009;&#x597D;&#x76F4;&#x63A5;&#x5B89;&#x88C5;&#xFF0C;&#x5B89;&#x88C5;&#x597D;&#x4E4B;&#x540E;&#x52FE;&#x9009;&#x81EA;&#x52A8;&#x91CD;&#x542F;jenkins</p>
+<h3 id="&#x914D;&#x8F69;maven">&#x914D;&#x8F69;maven</h3>
+<p>&#x8FDB;&#x5165;&#x5168;&#x5C40;&#x5DE5;&#x5177; configureTools/</p>
+<p><img src="http://source.qiniu.cnd.nsini.com/images/2019/07/49/c5/e2/20190726-23cc2b4dcf892fffebae9d47c5649d74.jpeg?imageView2/2/w/1280/interlace/0/q/100" alt=""></p>
+<p>&#x9009;&#x62E9;&#x65B0;&#x589E;maven &#x5E76;&#x914D;&#x7F6E;&#x597D;&#x7248;&#x672C;&#xFF0C;&#x5982;&#x679C;&#x60A8;&#x6709;&#x81EA;&#x5DF1;&#x7684;maven &#x6839;&#x636E;&#x81EA;&#x5DF1;&#x7684;&#x9700;&#x6C42;&#x914D;&#x7F6E;&#x8DEF;&#x5F84;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="install/kpaas.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 安装kplcloud">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"jenkins及git的SSHKey配置","level":"4.1","depth":1,"next":{"title":"登陆","level":"5.1","depth":1,"ref":"","articles":[]},"previous":{"title":"安装kplcloud","level":"3.9","depth":1,"path":"install/kpaas.md","ref":"install/kpaas.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"jenkins.md","mtime":"2019-08-02T05:22:35.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-08-02T06:03:58.676Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
