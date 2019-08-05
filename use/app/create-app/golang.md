@@ -49,7 +49,7 @@ CMD ["/go/bin/hello"]
 7. 如果选择了“增加端口” 会列出端口、协议填写
 8. 端口及协议：如果选择了则会创建Service进行负载，注意端口名称的格式，必须是`xxx-port`，可以添加多个端口，但建议一个应用只启动一个端口。
 
-![](http://source.qiniu.cnd.nsini.com/images/2019/08/d8/23/b5/20190801-4627d5ebc5de538dbdf1f9ab235d8d65.jpeg?imageView2/2/w/1280/interlace/0/q/80)
+![](http://source.qiniu.cnd.nsini.com/images/2019/08/43/19/fa/20190805-7e77d97823e1a3a3fe2d5d44194437f8.jpeg?imageView2/2/w/1280/interlace/0/q/80)
 
 ![](http://source.qiniu.cnd.nsini.com/images/2019/08/72/ee/ca/20190801-04373694ed64af40c9cdafa9ee372b75.jpeg?imageView2/2/w/1280/interlace/0/q/80)
 

@@ -20,7 +20,7 @@
 │   ├── amqp // rabbimt 的操作实现
 │   ├── casbin // casbin 的实现
 │   ├── cmd // cmd参数处理 
-│   ├── config // 配置文件
+│   ├── config // 配置文件处理实例化
 │   ├── consul // 操作consul kv 的实现
 │   ├── email
 │   ├── event
@@ -33,10 +33,10 @@
 │   ├── middleware // 中间件
 │   ├── mysql // 数据连接处理
 │   ├── pkg // 具体的业务实现逻辑
-│   │   ├── account
-│   │   ├── audit
-│   │   ├── auth
-│   │   ├── build
+│   │   ├── account // 账号相关实现
+│   │   ├── audit // 就用审核逻辑
+│   │   ├── auth // 授权登陆
+│   │   ├── build // 应用的构建逻辑
 │   │   ├── configmap
 │   │   ├── consul
 │   │   ├── cronjob
@@ -87,13 +87,13 @@
 
 Golang 代码使用 goimports 和 gofmt 进行代码格式化
 
-
-
-### 合名规范
+### 命名规范
 
 #### 文件名命名规范
 
 用小写，尽量见名思义，看见文件名就可以知道这个文件下的大概内容，对于源代码里的文件，文件名要很好的代表了一个模块实现的功能。
+
+src/ 目录下创建的是可公用的组件，src/pkg/下是各个功能模块，模块之间可以相互调用。
 
 #### 包名
 
@@ -102,6 +102,33 @@ Golang 代码使用 goimports 和 gofmt 进行代码格式化
 #### 模块包规范
 
 新增加的模块必须在src/pkg目录下，每个模块必须包含4个文件，分别是service.go、logging.go、endpoint.go、transport.go
+
+logging.go：
+
+```go
+type loggingService struct {
+	logger log.Logger
+	Service
+}
+
+func NewLoggingService(logger log.Logger, s Service) Service {
+	return &loggingService{logger, s}
+}
+
+func (s *loggingService) Get(ctx context.Context, name string) (rs interface{}, err error) {
+	defer func(begin time.Time) {
+		_ = s.logger.Log(
+			"method", "Get",
+			"name", name,
+			"took", time.Since(begin),
+			"err", err,
+		)
+	}(time.Now())
+	return s.Service.Get(ctx, name)
+}
+```
+
+service.go 里的每个方法必须带有一个logging方法，日志输打印入参入出参和错误信息。
 
 #### 接口规范
 
@@ -178,6 +205,8 @@ const (
 错误处理的原则就是不能丢弃任何有返回 err 的调用，不要采用_丢弃，必须全部处理。接收到错误，要么返回 err，并用 log记录下来。 error 的信息不要采用大写字母，尽量保持你的错误简短，但是要足够表达你的错误的意思。**每个pkg下的模块的错误必须定义在本模块下，不得跨模块调用。**
 
 除了在man.go可以使用panic外，其于地方一率不得使用panic。
+
+错误变量名以Err开头，接包名最后接具体的错误 Err{pkg}NotFound: xxx 未找到
 
 命名参考：
 

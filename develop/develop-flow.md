@@ -1,6 +1,6 @@
 # 开发流程
 
-## 安装kplcloud
+## 开发kplcloud
 
 若您想对kplcloud进行二次开发，可以将代码克隆在您本地。
 
