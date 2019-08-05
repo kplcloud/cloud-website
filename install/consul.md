@@ -1,13 +1,12 @@
-# Consul 集群
+# 安装Consul集群
 
-> 如果您的独立的Consul集群或不想使用Consul的话，不需要执行以下命令。
-> 以下命令是将docker版的consul集群安装在您的kubernetes集群上前提是前必须有持久化存储。
+> 如果您的独立的Consul集群或不想使用Consul的话，不需要执行以下命令。 以下命令是将docker版的consul集群安装在您的kubernetes集群上前提是前必须有持久化存储。
 
 如果您还没有初始化持久化存储的，请在这里[持久化存储](storage.md)配置好存储类再安装consul集群。
 
-## 安装
+### 安装
 
-```
+```text
 $ kubectl apply -f install/kubernetes/consul/configmap.yaml
 $ kubectl apply -f install/kubernetes/consul/service.yaml
 $ kubectl apply -f install/kubernetes/consul/statefulset.yaml
@@ -22,11 +21,11 @@ $ kubectl apply -f install/kubernetes/consul/ingress.yaml
 
 [configmap.yaml](../../install/kubernetes/consul/configmap.yaml) consul cluster server的配置文件
 
-## 注释
+### 注释
 
 这个kubernetes亲和度问题您可能需要关注一下，如果您的kubernetes是单点，请使用以下注释掉的代码。否由会无法起动服务。
 
-```yaml
+```text
       affinity:
         podAntiAffinity:
           requiredDuringSchedulingIgnoredDuringExecution:
@@ -41,3 +40,4 @@ $ kubectl apply -f install/kubernetes/consul/ingress.yaml
 #              podAffinityTerm:
 #                topologyKey: kubernetes.io/hostname
 ```
+
