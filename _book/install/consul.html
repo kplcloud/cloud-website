@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>安装consul集群 · GitBook</title>
+        <title>安装Consul集群 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="redis.html" />
+    <link rel="next" href="rabbitmq.html" />
     
     
-    <link rel="prev" href="storage.html" />
+    <link rel="prev" href="redis.html" />
     
 
     </head>
@@ -94,7 +94,7 @@
                 <a href="../">
             
                     
-                    简介
+                    Introduction
             
                 </a>
             
@@ -109,22 +109,9 @@
         
         
     
-        <li class="chapter " data-level="2.1" >
+        <li class="chapter " data-level="2.1" data-path="../start/config.html">
             
-                <span>
-            
-                    
-                    技术架构
-            
-                </span>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="2.2" data-path="../config.html">
-            
-                <a href="../config.html">
+                <a href="../start/config.html">
             
                     
                     配置文件解析
@@ -135,12 +122,32 @@
             
         </li>
     
-        <li class="chapter " data-level="2.3" data-path="namespace.html">
+        <li class="chapter " data-level="2.2" data-path="../start/jenkins.html">
+            
+                <a href="../start/jenkins.html">
+            
+                    
+                    配置gitlab与jenkins
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">安装相关依赖</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="namespace.html">
             
                 <a href="namespace.html">
             
                     
-                    创建新的空间
+                    Namespace
             
                 </a>
             
@@ -148,32 +155,12 @@
             
         </li>
     
-
-    
-        
-        <li class="header">安装相关服务</li>
-        
-        
-    
-        <li class="chapter " data-level="3.1" data-path="storage.html">
+        <li class="chapter " data-level="3.2" data-path="storage.html">
             
                 <a href="storage.html">
             
                     
-                    安装持久化存储
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter active" data-level="3.2" data-path="consul.html">
-            
-                <a href="consul.html">
-            
-                    
-                    安装consul集群
+                    配置持久化存储
             
                 </a>
             
@@ -186,7 +173,7 @@
                 <a href="redis.html">
             
                     
-                    安装单点redis
+                    安装Redis 单点
             
                 </a>
             
@@ -194,12 +181,25 @@
             
         </li>
     
-        <li class="chapter " data-level="3.4" data-path="rabbitmq.html">
+        <li class="chapter active" data-level="3.4" data-path="consul.html">
+            
+                <a href="consul.html">
+            
+                    
+                    安装Consul集群
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="rabbitmq.html">
             
                 <a href="rabbitmq.html">
             
                     
-                    安装单点rabbitMQ
+                    安装RabbitMQ服务
             
                 </a>
             
@@ -207,12 +207,12 @@
             
         </li>
     
-        <li class="chapter " data-level="3.5" data-path="mysql.html">
+        <li class="chapter " data-level="3.6" data-path="mysql.html">
             
                 <a href="mysql.html">
             
                     
-                    安装单点mysql
+                    安装Mysql服务
             
                 </a>
             
@@ -220,7 +220,7 @@
             
         </li>
     
-        <li class="chapter " data-level="3.6" data-path="elk.html">
+        <li class="chapter " data-level="3.7" data-path="elk.html">
             
                 <a href="elk.html">
             
@@ -228,19 +228,6 @@
                     安装ELK
             
                 </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="3.7" >
-            
-                <span>
-            
-                    
-                    安装Prometheus
-            
-                </span>
             
 
             
@@ -259,39 +246,6 @@
             
         </li>
     
-        <li class="chapter " data-level="3.9" data-path="kpaas.html">
-            
-                <a href="kpaas.html">
-            
-                    
-                    安装kplcloud
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-    
-        
-        <li class="header">开始</li>
-        
-        
-    
-        <li class="chapter " data-level="4.1" data-path="../jenkins.html">
-            
-                <a href="../jenkins.html">
-            
-                    
-                    jenkins及git的SSHKey配置
-            
-                </a>
-            
-
-            
-        </li>
-    
 
     
         
@@ -299,168 +253,38 @@
         
         
     
-        <li class="chapter " data-level="5.1" >
+        <li class="chapter " data-level="4.1" data-path="../use/login.html">
             
-                <span>
+                <a href="../use/login.html">
             
                     
                     登陆
             
-                </span>
+                </a>
             
 
             
         </li>
     
-        <li class="chapter " data-level="5.2" >
+        <li class="chapter " data-level="4.2" data-path="../use/workspace.html">
             
-                <span>
+                <a href="../use/workspace.html">
             
                     
-                    模版管理
+                    工作台
             
-                </span>
+                </a>
             
 
             
         </li>
     
-        <li class="chapter " data-level="5.3" >
+        <li class="chapter " data-level="4.3" >
             
                 <span>
             
                     
-                    Webhooks功能使用
-            
-                </span>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="5.4" >
-            
-                <span>
-            
-                    
-                    绑定微信消息推送
-            
-                </span>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="5.5" >
-            
-                <span>
-            
-                    
-                    定时任务
-            
-                </span>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="5.6" >
-            
-                <span>
-            
-                    
-                    各个语言的应用部署
-            
-                </span>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="5.7" >
-            
-                <span>
-            
-                    
-                    工具集
-            
-                </span>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="5.8" >
-            
-                <span>
-            
-                    
-                    自己定义Hosts
-            
-                </span>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="5.9" >
-            
-                <span>
-            
-                    
-                    自定义启动命令
-            
-                </span>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="5.10" >
-            
-                <span>
-            
-                    
-                    消息订阅
-            
-                </span>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="5.11" >
-            
-                <span>
-            
-                    
-                    日志采集及kibana使用
-            
-                </span>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="5.12" >
-            
-                <span>
-            
-                    
-                    配置自动构建
-            
-                </span>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="5.13" >
-            
-                <span>
-            
-                    
-                    流量镜像功能配置
+                    创建应用
             
                 </span>
             
@@ -469,25 +293,12 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="5.13.1" data-path="../start/create-golang-app.html">
-            
-                <a href="../start/create-golang-app.html">
-            
-                    
-                    部署一个Golang语言应用
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="5.13.2" >
+        <li class="chapter " data-level="4.3.1" >
             
                 <span>
             
                     
-                    部署一个Java语言应用
+                    创建一个Golang应用
             
                 </span>
             
@@ -495,12 +306,12 @@
             
         </li>
     
-        <li class="chapter " data-level="5.13.3" >
+        <li class="chapter " data-level="4.3.2" >
             
                 <span>
             
                     
-                    部署一个NodeJS语言应用
+                    创建一个Java应用
             
                 </span>
             
@@ -508,12 +319,12 @@
             
         </li>
     
-        <li class="chapter " data-level="5.13.4" >
+        <li class="chapter " data-level="4.3.3" >
             
                 <span>
             
                     
-                    部署一个Python语言应用
+                    创建一个Python应用
             
                 </span>
             
@@ -521,12 +332,25 @@
             
         </li>
     
-        <li class="chapter " data-level="5.13.5" >
+        <li class="chapter " data-level="4.3.4" >
             
                 <span>
             
                     
-                    部署一个静态文件服务
+                    创建一个NodeJs应用
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3.5" >
+            
+                <span>
+            
+                    
+                    创建一个静态应用
             
                 </span>
             
@@ -539,25 +363,45 @@
             
         </li>
     
-        <li class="chapter " data-level="5.14" >
+
+    
+        
+        <li class="header">开发指南</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../develop/develop-flow.html">
             
-                <span>
+                <a href="../develop/develop-flow.html">
             
                     
-                    组权限操作说明
+                    开发流程
             
-                </span>
+                </a>
             
 
             
         </li>
     
-        <li class="chapter " data-level="5.15" >
+        <li class="chapter " data-level="5.2" data-path="../develop/code-standards.html">
+            
+                <a href="../develop/code-standards.html">
+            
+                    
+                    代码规范
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" >
             
                 <span>
             
                     
-                    配置中心consul使用
+                    发布流程
             
                 </span>
             
@@ -595,7 +439,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >安装consul集群</a>
+        <a href=".." >安装Consul集群</a>
     </h1>
 </div>
 
@@ -610,36 +454,36 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="consul-&#x96C6;&#x7FA4;">Consul &#x96C6;&#x7FA4;</h1>
+                                <h1 id="&#x5B89;&#x88C5;consul&#x96C6;&#x7FA4;">&#x5B89;&#x88C5;Consul&#x96C6;&#x7FA4;</h1>
 <blockquote>
-<p>&#x5982;&#x679C;&#x60A8;&#x7684;&#x72EC;&#x7ACB;&#x7684;Consul&#x96C6;&#x7FA4;&#x6216;&#x4E0D;&#x60F3;&#x4F7F;&#x7528;Consul&#x7684;&#x8BDD;&#xFF0C;&#x4E0D;&#x9700;&#x8981;&#x6267;&#x884C;&#x4EE5;&#x4E0B;&#x547D;&#x4EE4;&#x3002;
-&#x4EE5;&#x4E0B;&#x547D;&#x4EE4;&#x662F;&#x5C06;docker&#x7248;&#x7684;consul&#x96C6;&#x7FA4;&#x5B89;&#x88C5;&#x5728;&#x60A8;&#x7684;kubernetes&#x96C6;&#x7FA4;&#x4E0A;&#x524D;&#x63D0;&#x662F;&#x524D;&#x5FC5;&#x987B;&#x6709;&#x6301;&#x4E45;&#x5316;&#x5B58;&#x50A8;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x60A8;&#x7684;&#x72EC;&#x7ACB;&#x7684;Consul&#x96C6;&#x7FA4;&#x6216;&#x4E0D;&#x60F3;&#x4F7F;&#x7528;Consul&#x7684;&#x8BDD;&#xFF0C;&#x4E0D;&#x9700;&#x8981;&#x6267;&#x884C;&#x4EE5;&#x4E0B;&#x547D;&#x4EE4;&#x3002; &#x4EE5;&#x4E0B;&#x547D;&#x4EE4;&#x662F;&#x5C06;docker&#x7248;&#x7684;consul&#x96C6;&#x7FA4;&#x5B89;&#x88C5;&#x5728;&#x60A8;&#x7684;kubernetes&#x96C6;&#x7FA4;&#x4E0A;&#x524D;&#x63D0;&#x662F;&#x524D;&#x5FC5;&#x987B;&#x6709;&#x6301;&#x4E45;&#x5316;&#x5B58;&#x50A8;&#x3002;</p>
 </blockquote>
 <p>&#x5982;&#x679C;&#x60A8;&#x8FD8;&#x6CA1;&#x6709;&#x521D;&#x59CB;&#x5316;&#x6301;&#x4E45;&#x5316;&#x5B58;&#x50A8;&#x7684;&#xFF0C;&#x8BF7;&#x5728;&#x8FD9;&#x91CC;<a href="storage.html">&#x6301;&#x4E45;&#x5316;&#x5B58;&#x50A8;</a>&#x914D;&#x7F6E;&#x597D;&#x5B58;&#x50A8;&#x7C7B;&#x518D;&#x5B89;&#x88C5;consul&#x96C6;&#x7FA4;&#x3002;</p>
-<h2 id="&#x5B89;&#x88C5;">&#x5B89;&#x88C5;</h2>
-<pre><code>$ kubectl apply -f install/kubernetes/consul/configmap.yaml
+<h3 id="&#x5B89;&#x88C5;">&#x5B89;&#x88C5;</h3>
+<pre><code class="lang-text">$ kubectl apply -f install/kubernetes/consul/configmap.yaml
 $ kubectl apply -f install/kubernetes/consul/service.yaml
 $ kubectl apply -f install/kubernetes/consul/statefulset.yaml
 $ kubectl apply -f install/kubernetes/consul/ingress.yaml
-</code></pre><p>&#x54B1;&#x4EEC;&#x91C7;&#x7528;&#x7684;&#x662F;StatefulSet&#x7684;&#x65B9;&#x5F0F;&#x90E8;&#x7F72;&#x96C6;&#x7FA4;&#xFF0C;&#x82E5;&#x60A8;&#x5DF2;&#x7ECF;&#x6709;&#x4E86;&#x6301;&#x4E45;&#x5316;&#x7684;&#x5B58;&#x50A8;&#x7C7B;&#xFF0C;&#x5C06;storageClassName&#x4FEE;&#x6539;&#x6210;&#x60A8;&#x7684;&#x5B58;&#x50A8;&#x7C7B;&#x5305;&#x5C31;&#x597D;&#x3002;</p>
+</code></pre>
+<p>&#x54B1;&#x4EEC;&#x91C7;&#x7528;&#x7684;&#x662F;StatefulSet&#x7684;&#x65B9;&#x5F0F;&#x90E8;&#x7F72;&#x96C6;&#x7FA4;&#xFF0C;&#x82E5;&#x60A8;&#x5DF2;&#x7ECF;&#x6709;&#x4E86;&#x6301;&#x4E45;&#x5316;&#x7684;&#x5B58;&#x50A8;&#x7C7B;&#xFF0C;&#x5C06;storageClassName&#x4FEE;&#x6539;&#x6210;&#x60A8;&#x7684;&#x5B58;&#x50A8;&#x7C7B;&#x5305;&#x5C31;&#x597D;&#x3002;</p>
 <p><img src="http://source.qiniu.cnd.nsini.com/images/2019/07/09/73/29/20190723-1344eae741d09fdf2d10b1ba73e09287.jpeg?imageView2/2/w/1280/interlace/0/q/100" alt=""></p>
-<p><a href="../../install/kubernetes/consul/ingress.yaml">ingress.yaml</a> &#x63D0;&#x4F9B;&#x5BF9;&#x5916;&#x8BBF;&#x95EE;&#x7684;&#x5165;&#x53E3;</p>
-<p><a href="../../install/kubernetes/consul/configmap.yaml">configmap.yaml</a> consul cluster server&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;</p>
-<h2 id="&#x6CE8;&#x91CA;">&#x6CE8;&#x91CA;</h2>
+<p><a href="https://github.com/kplcloud/kplcloud/tree/master/install/kubernetes/consul/ingress.yaml" target="_blank">ingress.yaml</a> &#x63D0;&#x4F9B;&#x5BF9;&#x5916;&#x8BBF;&#x95EE;&#x7684;&#x5165;&#x53E3;</p>
+<p><a href="https://github.com/kplcloud/kplcloud/tree/master/install/kubernetes/consul/configmap.yaml" target="_blank">configmap.yaml</a> consul cluster server&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;</p>
+<h3 id="&#x6CE8;&#x91CA;">&#x6CE8;&#x91CA;</h3>
 <p>&#x8FD9;&#x4E2A;kubernetes&#x4EB2;&#x548C;&#x5EA6;&#x95EE;&#x9898;&#x60A8;&#x53EF;&#x80FD;&#x9700;&#x8981;&#x5173;&#x6CE8;&#x4E00;&#x4E0B;&#xFF0C;&#x5982;&#x679C;&#x60A8;&#x7684;kubernetes&#x662F;&#x5355;&#x70B9;&#xFF0C;&#x8BF7;&#x4F7F;&#x7528;&#x4EE5;&#x4E0B;&#x6CE8;&#x91CA;&#x6389;&#x7684;&#x4EE3;&#x7801;&#x3002;&#x5426;&#x7531;&#x4F1A;&#x65E0;&#x6CD5;&#x8D77;&#x52A8;&#x670D;&#x52A1;&#x3002;</p>
-<pre><code class="lang-yaml"><span class="hljs-attr">      affinity:</span>
-<span class="hljs-attr">        podAntiAffinity:</span>
-<span class="hljs-attr">          requiredDuringSchedulingIgnoredDuringExecution:</span>
-<span class="hljs-attr">            - labelSelector:</span>
-<span class="hljs-attr">                matchLabels:</span>
-<span class="hljs-attr">                  app:</span> consul
-<span class="hljs-attr">                  component:</span> server
-<span class="hljs-attr">              topologyKey:</span> kubernetes.io/hostname
-<span class="hljs-comment">#          # &#x5355;&#x8282;&#x70B9;&#x7528;&#x8FD9;&#x4E2A;</span>
-<span class="hljs-comment">#          preferredDuringSchedulingIgnoredDuringExecution:</span>
-<span class="hljs-comment">#            - wight: 100</span>
-<span class="hljs-comment">#              podAffinityTerm:</span>
-<span class="hljs-comment">#                topologyKey: kubernetes.io/hostname</span>
+<pre><code class="lang-text">      affinity:
+        podAntiAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            - labelSelector:
+                matchLabels:
+                  app: consul
+                  component: server
+              topologyKey: kubernetes.io/hostname
+#          # &#x5355;&#x8282;&#x70B9;&#x7528;&#x8FD9;&#x4E2A;
+#          preferredDuringSchedulingIgnoredDuringExecution:
+#            - wight: 100
+#              podAffinityTerm:
+#                topologyKey: kubernetes.io/hostname
 </code></pre>
 
                                 
@@ -668,12 +512,12 @@ $ kubectl apply -f install/kubernetes/consul/ingress.yaml
 
             
                 
-                <a href="storage.html" class="navigation navigation-prev " aria-label="Previous page: 安装持久化存储">
+                <a href="redis.html" class="navigation navigation-prev " aria-label="Previous page: 安装Redis 单点">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="redis.html" class="navigation navigation-next " aria-label="Next page: 安装单点redis">
+                <a href="rabbitmq.html" class="navigation navigation-next " aria-label="Next page: 安装RabbitMQ服务">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -684,7 +528,7 @@ $ kubectl apply -f install/kubernetes/consul/ingress.yaml
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"安装consul集群","level":"3.2","depth":1,"next":{"title":"安装单点redis","level":"3.3","depth":1,"path":"install/redis.md","ref":"install/redis.md","articles":[]},"previous":{"title":"安装持久化存储","level":"3.1","depth":1,"path":"install/storage.md","ref":"install/storage.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"install/consul.md","mtime":"2019-08-02T05:55:33.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-08-02T06:03:58.676Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"安装Consul集群","level":"3.4","depth":1,"next":{"title":"安装RabbitMQ服务","level":"3.5","depth":1,"path":"install/rabbitmq.md","ref":"install/rabbitmq.md","articles":[]},"previous":{"title":"安装Redis 单点","level":"3.3","depth":1,"path":"install/redis.md","ref":"install/redis.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"install/consul.md","mtime":"2019-08-05T03:52:06.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-08-05T03:43:31.421Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -692,6 +536,10 @@ $ kubectl apply -f install/kubernetes/consul/ingress.yaml
         
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
     
         
         <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>

@@ -20,7 +20,7 @@ $ kubectl apply -f install/kubernetes/mysql/service.yaml
 * `MYSQL_ROOT_PASSWORD`: mysql用户名
 * `MYSQL_ROOT_PASSWORD`: mysql密码
 
-[statefulset.yaml](../../install/kubernetes/mysql/statefulset.yaml)
+[statefulset.yaml](https://github.com/kplcloud/kplcloud/tree/master/install/kubernetes/mysql/statefulset.yaml)
 
 本项目需要创建数据库: kplcloud
 

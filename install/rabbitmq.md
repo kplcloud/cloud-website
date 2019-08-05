@@ -15,7 +15,7 @@ $ kubectl apply -f install/kubernetes/rabbitmq/statefulset.yaml
 $ kubectl apply -f install/kubernetes/rabbitmq/service.yaml
 ```
 
-有状态服务: [statefulset.yaml](../../install/kubernetes/rabbitmq/statefulset.yaml) 入口: [ingress.yaml](../../install/kubernetes/rabbitmq/ingress.yaml)
+有状态服务: [statefulset.yaml](https://github.com/kplcloud/kplcloud/tree/master/install/kubernetes/rabbitmq/statefulset.yaml) 入口: [ingress.yaml](https://github.com/kplcloud/kplcloud/tree/master/install/kubernetes/rabbitmq/ingress.yaml)
 
 kpass在rabbitmq里需要创建:
 

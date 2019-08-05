@@ -17,9 +17,9 @@ $ kubectl apply -f install/kubernetes/consul/ingress.yaml
 
 ![](http://source.qiniu.cnd.nsini.com/images/2019/07/09/73/29/20190723-1344eae741d09fdf2d10b1ba73e09287.jpeg?imageView2/2/w/1280/interlace/0/q/100)
 
-[ingress.yaml](../../install/kubernetes/consul/ingress.yaml) 提供对外访问的入口
+[ingress.yaml](https://github.com/kplcloud/kplcloud/tree/master/install/kubernetes/consul/ingress.yaml) 提供对外访问的入口
 
-[configmap.yaml](../../install/kubernetes/consul/configmap.yaml) consul cluster server的配置文件
+[configmap.yaml](https://github.com/kplcloud/kplcloud/tree/master/install/kubernetes/consul/configmap.yaml) consul cluster server的配置文件
 
 ### 注释
 

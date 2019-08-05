@@ -12,5 +12,5 @@
 
 ### maven、git、sshkey等配置
 
-请参考  [jenkins及git的SSHKey配置](../jenkins.md)，这里不再重复写了。
+请参考  [jenkins及git的SSHKey配置](../start/jenkins.md)，这里不再重复写了。
 

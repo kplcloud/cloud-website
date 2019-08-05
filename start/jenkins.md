@@ -42,7 +42,7 @@ java 应用构建需要安装maven 插件
 
 搜索 maven 插件，勾选好直接安装，安装好之后勾选自动重启jenkins
 
-### 配轩maven
+### 配置maven
 
 进入全局工具 configureTools/
 
