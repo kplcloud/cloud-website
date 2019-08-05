@@ -8,7 +8,7 @@ description: 安装Redis 单点
 
 如果您还没有初始化持久化存储的，请在这里[持久化存储配置](storage.md)好存储类再安装Redis服务。
 
-### 安装
+## 安装
 
 ```text
 $ kubectl apply -f install/kubernetes/redis/statefulset.yaml
@@ -18,6 +18,5 @@ $ kubectl apply -f install/kubernetes/redis/configmap.yaml
 
 redis的配置相关信息写在configmap里面 [statefulset.yaml](https://github.com/kplcloud/kplcloud/tree/master/install/kubernetes/redis/statefulset.yaml)
 
-官方redis默认的存在/data目录，所以我们需要将持久化存储目标配置在/data目录下。  
-
+官方redis默认的存在/data目录，所以我们需要将持久化存储目标配置在/data目录下。
 

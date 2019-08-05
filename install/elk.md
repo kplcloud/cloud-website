@@ -1,4 +1,4 @@
-# ELK安装
+# 安装ELK
 
 > Logstash、ES对机器要的求比较高，建议使用独立的ELK集群负责日志的采集分析
 
@@ -6,14 +6,12 @@
 
 ELK主要包含Elasticsearch、Logstash、Kibana几个服务，kibana和logstash可以做在Deployment，全ES需要持久化，因为日志数据是存在ES上的。
 
-```
+```text
 $ kubectl apply -f install/kubernetes/elk/elasticsearch.yaml
 $ kubectl apply -f install/kubernetes/elk/logstash.yaml
 $ kubectl apply -f install/kubernetes/elk/kibana.yaml
 $ kubectl apply -f install/kubernetes/elk/ingress.yaml
 ```
-
-
 
 ## 相关配置
 

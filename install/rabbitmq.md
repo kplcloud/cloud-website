@@ -8,7 +8,7 @@ description: install-rabbitmq
 
 如果您还没有初始化持久化存储的，请在这里[持久化存储](storage.md)配置好存储类再安装rabbitMQ服务。
 
-### 安装
+## 安装
 
 ```text
 $ kubectl apply -f install/kubernetes/rabbitmq/statefulset.yaml

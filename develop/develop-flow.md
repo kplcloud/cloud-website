@@ -1,8 +1,6 @@
-# kplcloud 开发流程
+# 开发流程
 
 ## 安装kplcloud
-
-
 
 若您想对kplcloud进行二次开发，可以将代码克隆在您本地。
 
@@ -20,7 +18,7 @@ $ export GOPROXY=https://goproxy.io
 
 **启动**
 
-```
+```text
 $ make run
 ```
 
@@ -49,8 +47,6 @@ $ docker run -it --rm -p 8080:8080 kplcloud/kplcloud:latest -v app.cfg:/etc/kplc
 
 > 建议将与开普勒相关的服务独立到一个专有的 Namespace下，您可以执行以下命令创建该空间
 
-
-
 ```bash
 $ kubectl create namespace kpaas
 ```
@@ -61,13 +57,11 @@ $ kubectl create namespace kpaas
 $ kubectl apply -f install/kubernetes/namespace.yaml
 ```
 
-
-
-基础服务安装: [install.md](../install/README.md)
+基础服务安装: [install.md](https://github.com/icowan/cloud-website/tree/8f255be9ee74e1dcb3bab1373025dc200a1b89f5/install/README.md)
 
 若您的其他服务都已经准备好了，可以直接执行以下命令在kubernetes上进行部署开普勒云平台。
 
-```
+```text
 $ kubectl apply -f install/kubernetes/kpaas/configmap.yaml
 $ kubectl apply -f install/kubernetes/kpaas/deployment.yaml
 $ kubectl apply -f install/kubernetes/kpaas/service.yaml
