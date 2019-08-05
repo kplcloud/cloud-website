@@ -12,7 +12,7 @@ $ docker pull kpaas
 
 ## kubernetes
 
-基础服务安装: [install.md](install/README.md)
+基础服务安装: [install.md](README.md)
 
 若您的其他服务都已经准备好了，可以直接执行以下命令在kubernetes上进行部署开普勒云平台。
 
