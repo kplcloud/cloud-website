@@ -23,7 +23,7 @@
 * [登陆](use/login.md)
 * [工作台](use/workspace.md)
 * [创建应用](use/create-app/README.md)
-  * [创建一个Golang应用](use/create-app/create-golang-app.md)
+  * [创建一个Golang应用](use/create-app/golang.md)
   * [创建一个Java应用](use/create-app/chuang-jian-yi-ge-java-ying-yong.md)
   * [创建一个Python应用](use/create-app/chuang-jian-yi-ge-python-ying-yong.md)
   * [创建一个NodeJs应用](use/create-app/chuang-jian-yi-ge-nodejs-ying-yong.md)
