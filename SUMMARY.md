@@ -23,7 +23,7 @@
 * [登陆](use/login.md)
 * [工作台](use/workspace.md)
 * 创建应用
-  * 创建一个Golang应用
+  * [创建一个Golang应用](use/create-golang-app.md)
   * 创建一个Java应用
   * 创建一个Python应用
   * 创建一个NodeJs应用
