@@ -8,14 +8,14 @@ description: install-rabbitmq
 
 如果您还没有初始化持久化存储的，请在这里[持久化存储](storage.md)配置好存储类再安装rabbitMQ服务。
 
-### 安装
+## 安装
 
 ```text
 $ kubectl apply -f install/kubernetes/rabbitmq/statefulset.yaml
 $ kubectl apply -f install/kubernetes/rabbitmq/service.yaml
 ```
 
-有状态服务: [statefulset.yaml](../../install/kubernetes/rabbitmq/statefulset.yaml) 入口: [ingress.yaml](../../install/kubernetes/rabbitmq/ingress.yaml)
+有状态服务: [statefulset.yaml](https://github.com/kplcloud/kplcloud/tree/master/install/kubernetes/rabbitmq/statefulset.yaml) 入口: [ingress.yaml](https://github.com/kplcloud/kplcloud/tree/master/install/kubernetes/rabbitmq/ingress.yaml)
 
 kpass在rabbitmq里需要创建:
 

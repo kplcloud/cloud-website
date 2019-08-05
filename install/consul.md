@@ -4,7 +4,7 @@
 
 如果您还没有初始化持久化存储的，请在这里[持久化存储](storage.md)配置好存储类再安装consul集群。
 
-### 安装
+## 安装
 
 ```text
 $ kubectl apply -f install/kubernetes/consul/configmap.yaml
@@ -17,11 +17,11 @@ $ kubectl apply -f install/kubernetes/consul/ingress.yaml
 
 ![](http://source.qiniu.cnd.nsini.com/images/2019/07/09/73/29/20190723-1344eae741d09fdf2d10b1ba73e09287.jpeg?imageView2/2/w/1280/interlace/0/q/100)
 
-[ingress.yaml](../../install/kubernetes/consul/ingress.yaml) 提供对外访问的入口
+[ingress.yaml](https://github.com/kplcloud/kplcloud/tree/master/install/kubernetes/consul/ingress.yaml) 提供对外访问的入口
 
-[configmap.yaml](../../install/kubernetes/consul/configmap.yaml) consul cluster server的配置文件
+[configmap.yaml](https://github.com/kplcloud/kplcloud/tree/master/install/kubernetes/consul/configmap.yaml) consul cluster server的配置文件
 
-### 注释
+## 注释
 
 这个kubernetes亲和度问题您可能需要关注一下，如果您的kubernetes是单点，请使用以下注释掉的代码。否由会无法起动服务。
 
