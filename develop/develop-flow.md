@@ -32,6 +32,26 @@ $ make run
 
 app.cfg文件的配置请看[config.md](../start/config.md)
 
+
+
+### 前端
+
+前端主要是基于阿里开源的[https://ant.design](https://ant.design/) 进行开发。如果想了解请看官网。
+
+```bash
+$ git clone github.com/kplcloud/kpaas-frontend.git
+```
+
+#### 启动
+
+```bash
+$ yarn install // 安装依赖
+$ yarn start // 启动前端
+$ yarn run build // build 前端
+```
+
+
+
 ## Docker
 
 > 本地直接Docker启动，请参考以下命令
