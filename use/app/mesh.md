@@ -23,7 +23,7 @@
 
 下图是我们架构流量进入到我们容器所图：
 
-![](http://source.qiniu.cnd.nsini.com/images/2019/08/60/26/3d/20190808-f3379eb34bc6df16356175ba262606f2.jpeg?imageView2/2/w/1280/interlace/0/q/70)
+![](http://source.qiniu.cnd.nsini.com/images/2019/08/bd/11/9b/20190813-2b04ec201162b3819896abc011bbd649.jpeg?imageView2/2/w/1280/interlace/0/q/70)
 
 - DNS 将域名解析到VIP
 - VIP 将80的流量转发边缘节点的31380端口（这个是IstioIngressGateway控制器的Service的NodePort）
