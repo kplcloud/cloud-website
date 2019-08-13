@@ -15,11 +15,11 @@ description: app.cfg 配置文件解析>
 | http\_static | 静态文件路径 | ./static/ |
 | http\_proxy | 代理服务地址 | 如果您的环境是隔离的，又需要访问外网的话就填写 |
 | logs\_path | 日志文件目录 | 如果填写由会输出日志文件到指定目录 |
-| upload\_path | 上传文件的路径 | 如果需要持久化请配置pvc |
+| upload\_path | 上传文件的路径 | 发公告时上传资源的路径，如果需要持久化，请配置pvc |
 | domain | 网站域名 | https://kplcloud.nsini.com |
 | login\_type | 登陆的类型 | 1. ldap 需要在下面的 \[ldap\] 填写相关的ldap地址及配置信息 2. email 邮箱登陆 |
-| consul\_kv | 是否启用consul作为配置中心,并可在该平台进行kv的操作 | false |
-| app\_key | 用作加密解密使用的key |  |
+| consul\_kv | 是否启用consul作为配置中心,并可在该平台进行kv的操作 | false，如果为true 可在该平台操作Consul的KV |
+| app\_key | 用作加密解密使用的key | 初始化后就不修改 |
 | session\_timeout | 登陆超时的时间 | 7200 单位秒 |
 | kibana\_url | kibana 地址 |  |
 | transfer\_url | tracing 地址 |  |
@@ -29,6 +29,11 @@ description: app.cfg 配置文件解析>
 | docker\_repo | 您的镜像仓库地址 | 例如: hub.docker.com |
 | service\_mesh | 是否启用servicemesh功能 | 目前兼容istio |
 | domain\_suffix | 生成的ingress的后缀 | 例如: .kpaas.nsini.com |
+| client_id | OAuth App Client ID | 平台的OAuth App所生成的Client ID |
+| client_secret | OAuth App Client Secret | 平台的OAuth App所生成的Client Secret 如有不清楚的可查看 配置Github授权登陆 |
+| auth_login | 授权登陆 | 如果有填写那只能进行授权登陆 目前暂时支持Github |
+| default_namespace | 授权登陆默认可访问的空间 | Default: app 目前只支持一个 |
+| default_role_id | 授权登陆默认所属的我角色 | Default: 4 目前只支持一个 |
 
 ### \[cors\] 跨域设置
 
@@ -60,7 +65,13 @@ description: app.cfg 配置文件解析>
 | redis\_password | redis库密码 |  |
 | redis\_db | redisDB | 0 |
 
-~~\#\# \[kubernetes\] 配置~~
+### [kubernetes\] 配置
+
+| 字段               | 备注                        | 其他                         |
+| ------------------ | --------------------------- | ---------------------------- |
+| image_pull_secrets | 拉取镜像所需要的secrets名称 | 如果您的环境不需要可以不配置 |
+
+
 
 ### \[jenkins\] jenkins配置
 
@@ -137,37 +148,42 @@ description: app.cfg 配置文件解析>
 
 ### 完成的app.cfg
 
-```text
-​
-​
-; [server]
-; 该服务启动的相关参数
-; http_static: 静态文件目录, 前端的文件会放在这里
-; http_proxy: 代理服务地址如果需要的话就填
-; logs_path: 日志文件目录
-; upload_path: 文件上传目录
-; domain: 访问域名
-; login_type: 登陆类型
-;   1. ldap 需要在下面的 [ldap] 填写相关的ldap地址及配置信息
-;   2. email 邮箱登陆
-; consul_kv: 是否启consul kv功能, 如果启用, 将可以在平台上操作consul kv
-; app_key: 通常用来加密使用
-; session_timeout: sesstion时长, 单位秒
-; kibana_url: kibanba地址
-; grafana_url: grafana地址
-; heapster_url: heapster 地址
-; prometheus_url: prometheus地址 http://prometheus.kube-system:9090
-; docker_repo: 您的镜像仓库地址
+```ini
+; ;[server]
+; ;该服务启动的相关参数
+; ;http_static: 静态文件目录, 前端的文件会放在这里
+; ;http_proxy: 代理服务地址如果需要的话就填
+; ;logs_path: 日志文件目录
+; ;upload_path: 文件上传目录
+; ;domain: 访问域名
+; ;login_type: 登陆类型
+; ;  1. ldap 需要在下面的 [ldap] 填写相关的ldap地址及配置信息
+; ;  2. email 邮箱登陆
+; ;consul_kv: 是否启consul kv功能, 如果启用, 将可以在平台上操作consul kv
+; ;app_key: 通常用来加密使用
+; ;session_timeout: sesstion时长, 单位秒
+; ;kibana_url: kibanba地址
+; ;grafana_url: grafana地址
+; ;heapster_url: heapster 地址
+; ;prometheus_url: prometheus地址 http://prometheus.kube-system:9090
+; ;docker_repo: 您的镜像仓库地址
+; ;service_mesh: false 是否启用service mesh 功能
+; ;domain_suffix: 生成对外访问域名的后缀
+; ;client_id: 平台的OAuth App所生成的Client ID
+; ;client_secret: 平台的OAuth App所生成的Client Secret 如有不清楚的可查看 配置Github授权登陆
+; ;auth_login: 授权登陆的平台，目前只支持GitHub
+; ;default_namespace: 默认分配的空间名 目前只支持一个
+; ;default_role_id: 默认分配的角色ID 目前只支持一个
 [server]
 app_name = kplcloud
 http_static = ./static/
-http_proxy =
-;logs_path = 
+;http_proxy = 
+;logs_path = /var/log
 upload_path = /tmp/kpaas/upload
-domain = https://kplcloud.nsini.com/
+domain = https://kplcloud.nsini.com
 login_type = email
 consul_kv = true
-app_key = 6&2*&^0Ypagc91iajsdf
+app_key = aw3g4#$YQe0gi-qob-ad424gvp
 session_timeout = 7200
 kibana_url = http://kibana.kpaas.nsini.com
 transfer_url = http://tracing.kpaas.nsini.com
@@ -177,138 +193,142 @@ heapster_url = http://heapster.kube-system
 docker_repo = hub.kpaas.nsini.com
 service_mesh = false
 domain_suffix = %s.%s.nsini.com
-​
-; [cors]
-; 主要是让服务端支持跨域请求
-; allow: 是否支持跨域请求
-; origin: Access-Control-Allow-Origin
-; methods: Access-Control-Allow-Methods
-; headers: Access-Control-Allow-Headers
+client_id = 
+client_secret = 
+auth_login = github
+default_namespace = app
+default_role_id = 4
+
+
+; ;[cors]
+; ;主要是让服务端支持跨域请求
+; ;allow: 是否支持跨域请求
+; ;origin: Access-Control-Allow-Origin
+; ;methods: Access-Control-Allow-Methods
+; ;headers: Access-Control-Allow-Headers
 [cors]
-allow = false
+allow = true
 origin = http://localhost:8000
 methods = GET,POST,OPTIONS,PUT,DELETE
 headers = Origin,Content-Type,Authorization,x-requested-with,Access-Control-Allow-Origin,Access-Control-Allow-Credentials
-​
-​
-; [mysql]
-; mysql相关的配置, 如下所示, 就不需要过多解释了
-; mysql_host: mysql
-; mysql_port: 3306
-; mysql_user: root
-; mysql_password: admin
-; mysql_database: kplcloud
-; mysql_debug: false
+
+
+; ;[mysql]
+; ;mysql相关的配置, 如下所示, 就不需要过多解释了
+; ;mysql_host: mysql
+; ;mysql_port: 3306
+; ;mysql_user: root
+; ;mysql_password: 
+; ;mysql_database: 
+; ;mysql_debug: false
 [mysql]
 mysql_host = mysql
 mysql_port = 3306
-mysql_user = root
-mysql_password = admin
+mysql_user = kplcloud
+mysql_password = 
 mysql_database = kplcloud
-mysql_debug = false
-;mysql_timeout = 20m
-;mysql_charset = utf8mb4
-​
-​
-; [redis]
-; redis可配集群访问和单点访问
-; redis_drive:
-;   1. cluster: 若为该值, 则访问redis集群
-;   2. single: 若为该值, 则访问单点redis服务
-; redis_hosts: redis IP 地址(redis:6379), 若redis_drive为cluster,则redis_hosts需要多个IP用";"隔开
-; redis_password: redis auth 密码
-; redis_db: 在redis_drive为cluster的情况下 redis_db 不需要设置
+mysql_debug = true
+
+
+; ;[redis]
+; ;redis可配集群访问和单点访问
+; ;redis_drive:
+; ;  1. cluster: 若为该值, 则访问redis集群
+; ;  2. single: 若为该值, 则访问单点redis服务
+; ;redis_hosts: redis IP 地址(redis:6379), 若redis_drive为cluster,则redis_hosts需要多个IP用";"隔开
+; ;redis_password: redis auth 密码
+; ;redis_db: 在redis_drive为cluster的情况下 redis_db 不需要设置
 [redis]
 redis_drive = single
 redis_hosts = redis:6379
-redis_password =
+redis_password = 
 redis_db = 0
-​
+
+; ;[kubernetes]
+; ;kubernetes的一些配置
+; ;image_pull_secrets: 拉取镜像所需要的secrets名称
 [kubernetes]
 image_pull_secrets = regcred
-​
-; [jenkins]
-; host: jenins 地址, 如: http://jenkins.devops.idc
-; token:
-; user: 执行相关jenkins任务的用户
-; credentials_id: 访问jenkins的凭据, 可以在jenkins的 credentials/store/system/domain/_/credential进行配置或创建
+
+; ;[jenkins]
+; ;host: jenins 地址, 如: http://jenkins.devops.idc
+; ;token:
+; ;user: 执行相关jenkins任务的用户
+; ;credentials_id: 访问jenkins的凭据, 可以在jenkins的 credentials/store/system/domain/_/credential进行配置或创建
 [jenkins]
 host = http://jenkins.kpaas.nsini.com/
 token = 
-user = admin
+user = 
 credentials_id = 
-​
-; [consul]
-; consul_token: 连接consul的 token
-; consul_addr: consul地址 http://consul:8500
+
+; ;[consul]
+; ;consul_token: 连接consul的 token
+; ;consul_addr: consul地址 http://consul:8500
 [consul]
 consul_token = 
 consul_addr = http://consul:8500
-​
-; [amqp]
-; url: rabbitmq的地址 amqp://kplcloud:kplcloud@rabbitmq:5672/kplcloud
-; exchange: direct
-; exchange_type: kplcloud-exchange
-; routing_key: kplcloud
+
+; ;[amqp]
+; ;url: rabbitmq的地址 amqp://kplcloud:kplcloud@rabbitmq:5672/kplcloud
+; ;exchange: direct
+; ;exchange_type: kplcloud-exchange
+; ;routing_key: kplcloud
 [amqp]
-url = amqp://kplcloud:kplcloud@rabbitmq:5672/kplcloud
+url = amqp://kplcloud:kplcloud@rabbit:30398/kplcloud
 exchange = direct
-exchange_type = kplcloud
+exchange_type = kplcloud-exchange
 routing_key = kplcloud
-​
-; [git]
-; git_type:
-;   1. gitlab: 使用内部自建的gitlab gitlab的版本需要支持v3 api,如果不支持 您可以自己行加载应用的package
-;   2. github: 使用公共的github
-; git_addr: git API地址, 例如: http://gitlab.domain.idc/api/v4/  v3 的API暂时不支持
-; token: 访问相关git的token 需要所有基础的clone权限 
-; client_id:  如果使用的是github 由需要用这个在https://github.com/settings/developers上查找
+
+; ;[git]
+; ;git_type:
+; ;  1. gitlab: 使用内部自建的gitlab gitlab的版本需要支持v3 api,如果不支持 您可以自己行加载应用的package
+; ;  2. github: 使用公共的github
+; ;git_addr: git API地址, 例如: http://gitlab.domain.idc/api/v4/  v3 的API暂时不支持
+; ;token: 访问相关git的token 需要所有基础的clone权限 0d6f6bc3ecaf97fc87aa2b8bf3e7e7d27667920b
+; ;client_id:  如果使用的是github 由需要用这个在https://github.com/settings/developers上查找 可不填
 [git]
-git_type = gitlab
-;git_addr = https://gitlab.com
-;token = 
+git_addr = https://gitlab.com
 git_type = github
-token = 
-;client_id = github-api
-​
-; [email]
-; 邮箱使用的是公司邮箱，有相应用API的,把src/email/client:EmailInterface 实现一遍就好
-; 若使用的是SMTP的话，配置下面相关参数就好
-;smtp_user: 发送邮箱
-;smtp_password: 密码
-;smtp_host: 服务端smtp 地址
+token = balabalabalabiu
+client_id = balabalabalabiu
+
+; ;[email]
+; ;邮箱使用的是公司邮箱，有相应用API的,把src/email/client:EmailInterface 实现一遍就好
+; ;若使用的是SMTP的话，配置下面相关参数就好
+; ;smtp_user: 发送邮箱
+; ;smtp_password: 密码
+; ;smtp_host: 服务端smtp 地址
 [email]
 smtp_user = 123456@qq.com
-smtp_password = ntijfenmgbppbibc
-smtp_host = smtp.qq.com:465
-​
-; [ldap]
-; ldap的相关配置,根据需要调整
+smtp_password = 123456
+smtp_host = smtp.qq.com:587
+
+; ;[ldap]
+; ;ldap的相关配置,根据需要调整
 [ldap]
-ldap_host = ldap
+ldap_host = 127.0.0.1
 ldap_port = 389
-ldap_base = DC=nsini,DC=com
+ldap_base = DC=yourdomain,DC=corp
 ldap_sseSSL = false
-ldap_bindDN = hello-monitorpl
-ldap_bind_password = 2019PasTps!9
+ldap_bindDN = 
+ldap_bind_password = 
 ldap_user_filter = (userPrincipalName=%s)
 ldap_group_filter = (&(objectCategory=Group))
 ldap_attr = name;mail
-​
-; [wechat]
-; app_id: 微信公众号的应用ID
-; access_token: 微信公众号的应用access_token
+
+; ;[wechat]
+; ;app_id: 微信公众号的应用ID
+; ;access_token: 微信公众号的应用access_token
 [wechat]
-app_id = 
-app_secret = 
-token = 
-encoding_aes_key =
-cache_model = file
-cache_file = /tmp/kpaas/cache/cache.txt
-​
-; [msg]
-; 消息分发中心，默认接收消息的管理员id
+app_id = balabalabalabiubiubiu
+app_secret = balabalabalabiubiubiu
+token = balabalabalabiubiubiu
+encoding_aes_key = balabalabalabiubiubiu
+
+; ;[msg]
+; ;消息分发中心，默认接收消息的管理员id
 [msg]
-alarm_default_email = solacowa@gmail.com
+alarm_default_email = solacowa@gmail.com;ysz1121@hotmail.com
+
 ```
 
