@@ -84,5 +84,5 @@ default_role_id = 4
 
 ![](http://source.qiniu.cnd.nsini.com/images/2019/08/d7/85/0c/20190808-c3ccecfa1ea7cd260f168074858d77c3.jpeg?imageView2/2/w/1280/interlace/0/q/70)
 
-![](http://source.qiniu.cnd.nsini.com/images/2019/08/55/e0/07/20190808-9757b26dcdbf78c900ed5bcae06559bd.jpeg?imageView2/2/w/1280/interlace/0/q/70)
+![](http://source.qiniu.cnd.nsini.com/images/2019/08/71/e5/12/20190812-0b6d4599d557209716653941e5a71a25.jpeg?imageView2/2/w/1280/interlace/0/q/70)
 
