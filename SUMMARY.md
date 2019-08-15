@@ -18,8 +18,7 @@
 * [安装ELK](install/elk.md)
 * [安装Jenkins](install/jenkins.md)
 * [安装Harbor仓库](install/harbor.md)
-* [安装Prometheus](install/permission.md)
-* [安装Grafana](install/grafana.md)
+* [安装Prometheus](install/prometheus.md)
 * [安装AlertManager](install/alertmanager.md)
 * [安装kplcloud](install/kpaas.md)
 
