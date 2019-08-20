@@ -11,6 +11,7 @@
 
 * [Namespace](install/namespace.md)
 * [配置持久化存储](install/storage.md)
+* [配置微信公众号](install/wechat.md)
 * [安装Redis 单点](install/redis.md)
 * [安装Consul集群](install/consul.md)
 * [安装RabbitMQ服务](install/rabbitmq.md)
@@ -51,11 +52,15 @@
   * [管理端口](use/app/ports.md)
   * [生成入口地址](use/app/ingress.md)
 * [应用审核部署](use/audit.md)
-* [绑定微信消息推送](use/bind-wechat.md)
 * [工具集](use/tools/README.md)
   * [调整容器时间](use/tools/container-time.md)
   * [克隆应用](use/tools/app-clone.md)
+* [个人中心](use/account/user.md)
+  * [用户中心](use/account/user.md)
+  * [个人设置](use/account/set.md)
+  * [消息中心](use/account/msg.md)
 * [消息订阅](use/message.md)
+* [消息分发](use/msg-distribute.md)
 * [配置与存储](use/cfg-storage/README.md)
   * [存储类管理](use/cfg-storage/storageclass.md)
   * [Consul KV使用](use/cfg-storage/consul.md)
@@ -78,14 +83,11 @@
   * [istio-虚拟服务](use/security/virtualservice.md)
 * [服务发现与负载](use/discovery.md)
 
-
-
 ## API<a id="api"></a>
 
 - [自动构建](api/automatic-build.md)
 
 - [处理Prometheus告警](api/prometheus-alert.md)
-
 
 ## 开发指南 <a id="develop"></a>
 
