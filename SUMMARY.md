@@ -6,12 +6,12 @@
 
 * [配置文件解析](start/config.md)
 * [配置gitlab与jenkins](start/jenkins.md)
+* [配置微信公众号](start/wechat.md)
 
 ## 安装相关依赖 <a id="install"></a>
 
 * [Namespace](install/namespace.md)
 * [配置持久化存储](install/storage.md)
-* [配置微信公众号](install/wechat.md)
 * [安装Redis 单点](install/redis.md)
 * [安装Consul集群](install/consul.md)
 * [安装RabbitMQ服务](install/rabbitmq.md)
