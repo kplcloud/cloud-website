@@ -51,6 +51,8 @@
   * [健康检测](use/app/probe.md)
   * [管理端口](use/app/ports.md)
   * [生成入口地址](use/app/ingress.md)
+  * [暂停应用](use/app/sleep.md)
+  * [删除应用](use/app/delete.md)
 * [定时任务](use/cronjob/cronjob.md)
 * [应用审核部署](use/audit.md)
 * [工具集](use/tools/README.md)

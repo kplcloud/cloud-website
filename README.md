@@ -13,3 +13,20 @@ kplcloud是一个基于Kubernetes的轻量级PaaS平台，通过可视化的界�
 Kplcloud已在服务于宜人财富多个团队，稳定运行了近两年，目前平台已在生产环境跑着上百个应用，近千个容器。  
 
 
+
+## 本地启动文档库
+
+1. 克隆
+
+   ```bash
+   $ git clone https://github.com/kplcloud/cloud-website.git
+   ```
+
+2. Docker启动
+
+   ```bash
+   $ docker build --rm -t cloud-website .
+   $ docker run -it --rm -p 80:80 cloud-website
+   ```
+
+3. 访问 浏览器打开`http://localhost`即可访问。
