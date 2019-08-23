@@ -10,11 +10,11 @@ COPY ./ /opt/gitbook
 
 WORKDIR /opt/gitbook
 
-RUN gitbook fetch 3.2.3 
+RUN gitbook fetch 3.2.3
 RUN gitbook build
 
 FROM nginx:1.17.3-alpine
 
-COPY --from=build_env /opt/gitbook/_book/* /usr/share/nginx/html/
+COPY --from=build_env /opt/gitbook/_book/ /usr/share/nginx/html/
 
 CMD ["nginx", "-g", "daemon off;"]
