@@ -17,4 +17,5 @@
 
 点击详情页的**build日志**选项卡，会显示最近的构建记录，点击左侧相应的版本可以查看该版本的构建情况，也可以对正在松建的应用进行中断，如下图：
 
-![](http://source.qiniu.cnd.nsini.com/images/2019/08/9a/41/01/20190808-453af40f44721bfa01946be041a9a6f8.jpeg?imageView2/2/w/1280/interlace/0/q/70)
+![](http://source.qiniu.cnd.nsini.com/images/2019/08/b7/8c/d6/20190823-9bc37b5a97c36c6cdd8e0a3b8c2b7f10.jpeg?imageView2/2/w/1280/interlace/0/q/70)
+
