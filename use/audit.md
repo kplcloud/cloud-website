@@ -12,17 +12,17 @@
 
 ### 提交的基础信息
 
-![](http://source.qiniu.cnd.nsini.com/images/2019/08/df/3d/ac/20190805-a39ede61339bc97aad7f94a73dedfb55.jpeg)
+![](http://source.qiniu.cnd.nsini.com/images/2019/08/df/3d/ac/20190805-a39ede61339bc97aad7f94a73dedfb55.jpeg?imageView2/2/w/1280/interlace/0/q/70)
 
 
 
 ### 生成的kubernetes yaml
 
-![](http://source.qiniu.cnd.nsini.com/images/2019/08/28/59/bb/20190805-171de63c4510be0eb1951d9b5982892b.jpeg)
+![](http://source.qiniu.cnd.nsini.com/images/2019/08/28/59/bb/20190805-171de63c4510be0eb1951d9b5982892b.jpeg?imageView2/2/w/1280/interlace/0/q/70)
 
 ### 代码库中的Dockerfile文件
 
-![](http://source.qiniu.cnd.nsini.com/images/2019/08/5d/c5/4e/20190805-f5fb16b5dcf1edca41881bb4c5d5d678.jpeg)
+![](http://source.qiniu.cnd.nsini.com/images/2019/08/5d/c5/4e/20190805-f5fb16b5dcf1edca41881bb4c5d5d678.jpeg?imageView2/2/w/1280/interlace/0/q/70)
 
 ### 驳回
 

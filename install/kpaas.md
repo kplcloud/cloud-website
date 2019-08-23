@@ -1,13 +1,13 @@
 # 安装kpaas
 
-```
-$ git clone github.com/nsini/kplcloud.git
+```bash
+$ git clone github.com/kplcloud/kplcloud.git
 ```
 
 ## Docker
 
-```
-$ docker pull kpaas
+```bash
+$ docker pull kplcloud/kplcloud:latest
 ```
 
 ## kubernetes
@@ -16,7 +16,7 @@ $ docker pull kpaas
 
 若您的其他服务都已经准备好了，可以直接执行以下命令在kubernetes上进行部署开普勒云平台。
 
-```
+```bash
 $ kubectl apply -f install/kubernetes/kpaas/configmap.yaml
 $ kubectl apply -f install/kubernetes/kpaas/deployment.yaml
 $ kubectl apply -f install/kubernetes/kpaas/service.yaml
@@ -39,4 +39,3 @@ Deployment需要把imagePullSecrets加上：
 imagePullSecrets:
 - name: regcred
 ```
-
