@@ -25,7 +25,7 @@ description: app.cfg 配置文件解析>
 | transfer\_url | tracing 地址 |  |
 | grafana\_url | grafana地址 |  |
 | heapster\_url | heapster地址 | k8s的cpu、内存等监控数据从这里拿 |
-| prometheus\_url | prometheus地址 | 其他监控数据获取源 |
+| prometheus\_url | prometheus地址 | 其他监控数据获取源 可以是内部地址也可以是外部地址 |
 | docker\_repo | 您的镜像仓库地址 | 例如: hub.docker.com |
 | service\_mesh | 是否启用servicemesh功能 | 目前兼容istio |
 | domain\_suffix | 生成的ingress的后缀 | 例如: .kpaas.nsini.com |
@@ -34,6 +34,10 @@ description: app.cfg 配置文件解析>
 | auth_login | 授权登陆 | 如果有填写那只能进行授权登陆 目前暂时支持Github |
 | default_namespace | 授权登陆默认可访问的空间 | Default: app 目前只支持一个 |
 | default_role_id | 授权登陆默认所属的我角色 | Default: 4 目前只支持一个 |
+| debug |  |  |
+| log_level | 输出的日志级别 | 支持五个级别 all,error,warn,info,debug |
+
+
 
 ### \[cors\] 跨域设置
 
@@ -139,12 +143,15 @@ description: app.cfg 配置文件解析>
 | app\_secret |  |  |
 | token |  |  |
 | encoding\_aes\_key |  |  |
+| tpl_alarm | 微信的报警模版ID | 需要在微信申请模版 |
+| tpl_notice | 微信的通知模版ID | 需要在微信申请模版 |
 
 ### \[msg\] 消息推送配置
 
 | 字段 | 备注 | 其他 |
 | :--- | :--- | :--- |
-| alarm\_default\_email | 系统告警默认发送的人员 | [solacowa@gmail.com](mailto:solacowa@gmail.com);[i@lattecake.com](mailto:i@lattecake.com) |
+| alarm_default_email | 系统告警默认发送的人员 | [solacowa@gmail.com](mailto:solacowa@gmail.com);[i@lattecake.com](mailto:i@lattecake.com) |
+| prometheus_url      | prometheus的外部地址 | 可以被访问到的 |
 
 ### 完成的app.cfg
 
@@ -174,16 +181,18 @@ description: app.cfg 配置文件解析>
 ; ;auth_login: 授权登陆的平台，目前只支持GitHub
 ; ;default_namespace: 默认分配的空间名 目前只支持一个
 ; ;default_role_id: 默认分配的角色ID 目前只支持一个
+; ;debug: 是否打印gorm debug 及 casbin debug日志
+; ;log_level: all,error,warn,info,debug
 [server]
 app_name = kplcloud
 http_static = ./static/
-;http_proxy = 
+;http_proxy =
 ;logs_path = /var/log
-upload_path = /tmp/kpaas/upload
+upload_path = /go/bin/upload
 domain = https://kplcloud.nsini.com
-login_type = email
+login_type = auth
 consul_kv = true
-app_key = aw3g4#$YQe0gi-qob-ad424gvp
+app_key = 6c47q0-w39euf!#%13a79
 session_timeout = 7200
 kibana_url = http://kibana.kpaas.nsini.com
 transfer_url = http://tracing.kpaas.nsini.com
@@ -193,12 +202,13 @@ heapster_url = http://heapster.kube-system
 docker_repo = hub.kpaas.nsini.com
 service_mesh = false
 domain_suffix = %s.%s.nsini.com
-client_id = 
-client_secret = 
+client_id = 20emfs
+client_secret = 9jfapsmdg8i
 auth_login = github
-default_namespace = app
+default_namespace = default
 default_role_id = 4
-
+debug = false
+log_level = all
 
 ; ;[cors]
 ; ;主要是让服务端支持跨域请求
@@ -207,7 +217,7 @@ default_role_id = 4
 ; ;methods: Access-Control-Allow-Methods
 ; ;headers: Access-Control-Allow-Headers
 [cors]
-allow = true
+allow = false
 origin = http://localhost:8000
 methods = GET,POST,OPTIONS,PUT,DELETE
 headers = Origin,Content-Type,Authorization,x-requested-with,Access-Control-Allow-Origin,Access-Control-Allow-Credentials
@@ -218,16 +228,14 @@ headers = Origin,Content-Type,Authorization,x-requested-with,Access-Control-Allo
 ; ;mysql_host: mysql
 ; ;mysql_port: 3306
 ; ;mysql_user: root
-; ;mysql_password: 
-; ;mysql_database: 
-; ;mysql_debug: false
+; ;mysql_password: admin
+; ;mysql_database: kplcloud
 [mysql]
 mysql_host = mysql
 mysql_port = 3306
 mysql_user = kplcloud
-mysql_password = 
+mysql_password = 32-0@g03wje;dm
 mysql_database = kplcloud
-mysql_debug = true
 
 
 ; ;[redis]
@@ -241,7 +249,7 @@ mysql_debug = true
 [redis]
 redis_drive = single
 redis_hosts = redis:6379
-redis_password = 
+;redis_password =
 redis_db = 0
 
 ; ;[kubernetes]
@@ -256,16 +264,16 @@ image_pull_secrets = regcred
 ; ;user: 执行相关jenkins任务的用户
 ; ;credentials_id: 访问jenkins的凭据, 可以在jenkins的 credentials/store/system/domain/_/credential进行配置或创建
 [jenkins]
-host = http://jenkins.kpaas.nsini.com/
-token = 
-user = 
-credentials_id = 
+host = http://jenkins:8080/
+token = 1c8da3c07ccab3c127f1f04d1ca05bac2c
+user = admin
+credentials_id =
 
 ; ;[consul]
 ; ;consul_token: 连接consul的 token
 ; ;consul_addr: consul地址 http://consul:8500
 [consul]
-consul_token = 
+consul_token =
 consul_addr = http://consul:8500
 
 ; ;[amqp]
@@ -274,7 +282,7 @@ consul_addr = http://consul:8500
 ; ;exchange_type: kplcloud-exchange
 ; ;routing_key: kplcloud
 [amqp]
-url = amqp://kplcloud:kplcloud@rabbit:30398/kplcloud
+url = amqp://kplcloud:kplcloud@rabbitmq:5672/kplcloud
 exchange = direct
 exchange_type = kplcloud-exchange
 routing_key = kplcloud
@@ -285,12 +293,14 @@ routing_key = kplcloud
 ; ;  2. github: 使用公共的github
 ; ;git_addr: git API地址, 例如: http://gitlab.domain.idc/api/v4/  v3 的API暂时不支持
 ; ;token: 访问相关git的token 需要所有基础的clone权限 0d6f6bc3ecaf97fc87aa2b8bf3e7e7d27667920b
-; ;client_id:  如果使用的是github 由需要用这个在https://github.com/settings/developers上查找 可不填
+; ;client_id:  如果使用的是github 由需要用这个在https://github.com/settings/developers上查找
 [git]
-git_addr = https://gitlab.com
+;git_type = gitlab
+;git_addr = https://gitlab.com
+;token = fpeYxskBEP29qzzyFu2T
 git_type = github
-token = balabalabalabiu
-client_id = balabalabalabiu
+token =
+client_id = github-api
 
 ; ;[email]
 ; ;邮箱使用的是公司邮箱，有相应用API的,把src/email/client:EmailInterface 实现一遍就好
@@ -300,18 +310,18 @@ client_id = balabalabalabiu
 ; ;smtp_host: 服务端smtp 地址
 [email]
 smtp_user = 123456@qq.com
-smtp_password = 123456
+smtp_password = 654321
 smtp_host = smtp.qq.com:587
 
 ; ;[ldap]
 ; ;ldap的相关配置,根据需要调整
 [ldap]
-ldap_host = 127.0.0.1
+ldap_host = ldap
 ldap_port = 389
-ldap_base = DC=yourdomain,DC=corp
+ldap_base = DC=nsini,DC=corp
 ldap_sseSSL = false
-ldap_bindDN = 
-ldap_bind_password = 
+ldap_bindDN = hlw-moniti
+ldap_bind_password = 2019Paasd-@4!2
 ldap_user_filter = (userPrincipalName=%s)
 ldap_group_filter = (&(objectCategory=Group))
 ldap_attr = name;mail
@@ -320,15 +330,17 @@ ldap_attr = name;mail
 ; ;app_id: 微信公众号的应用ID
 ; ;access_token: 微信公众号的应用access_token
 [wechat]
-app_id = balabalabalabiubiubiu
-app_secret = balabalabalabiubiubiu
-token = balabalabalabiubiubiu
-encoding_aes_key = balabalabalabiubiubiu
+app_id =
+app_secret =
+token =
+encoding_aes_key =
+tpl_alarm = kTwwPu4Bwd-Cr684ExGAf4YN4c2uHJeq_Own14uylH4
+tpl_notice = hqtepX_add4iv_O55BFD8GoSx6HwNs81GtXK7EBs38Q
 
 ; ;[msg]
 ; ;消息分发中心，默认接收消息的管理员id
 [msg]
-alarm_default_email = solacowa@gmail.com;ysz1121@hotmail.com
-
+alarm_default_email = admin@nsini.com;kplcloud@nsini.con
+prometheus_url = http://prometheus.kpaas.nsini.com
 ```
 
