@@ -37,3 +37,6 @@
 
 ![](http://source.qiniu.cnd.nsini.com/images/2019/08/00/03/c4/20190819-c3a710c8b464478ecac0daaa03000e5f.jpeg?imageView2/2/w/1280/interlace/0/q/70)
 
+> **微信图例：**
+
+![](http://source.qiniu.cnd.nsini.com/images/2019/08/50/f3/d8/20190827-0946294b05d38cdcdb308a0af3250bec.jpeg)
