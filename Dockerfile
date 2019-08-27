@@ -1,16 +1,11 @@
-FROM node:10.16.3-alpine AS build_env
+FROM kplcloud/gitbook:v3.2.3 AS build_env
 
 MAINTAINER dudulu <solacowa@gmail.com>
-
-RUN npm config set registry https://registry.npm.taobao.org
-
-RUN npm install -g gitbook-cli
 
 COPY ./ /opt/gitbook
 
 WORKDIR /opt/gitbook
 
-RUN gitbook fetch 3.2.3
 RUN gitbook build
 
 FROM nginx:1.17.3-alpine
