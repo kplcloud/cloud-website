@@ -32,9 +32,43 @@
 >
 > **JenkinsCommand** : 创建一个 Jenkins 项目的Shell命令
 >
+> **ServiceEntry** : 
+>
+> **Gateway** : 配置网关
+>
+> **VirtualService** : 
+>
+> **IstioProxy** :  配置 Istio 代理
+>
+> **InitContainers** : 
+>
 > **FilebeatConfigMap** :  日志采集的配置文件
 >
 > **StorageClass** : 创建一个存储卷
+>
+> **PersistentVolumeClaim** : 
+>
+> **StatefulSet** : 
+>
+> **RedisClusterStatefulSet** :
+>
+> **RedisClusterConfigMap** : 
+>
+> **ZookeeperStatefulSet** : 
+>
+> **RocketMqStatefulSet** :
+>
+> **RabbitMqStatefulSet** : 
+>
+> **MysqlStatefulSet** : 
+>
+> **FilebeatContainer** : 
+>
+> **EmailAlarm** : 
+>
+> **EmailNotice** :
+>
+> **EmailProclaim** : 
 >
 > 更多模板信息, 待完善.....
 
