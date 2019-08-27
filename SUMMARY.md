@@ -6,6 +6,7 @@
 
 * [配置文件解析](start/config.md)
 * [配置gitlab与jenkins](start/jenkins.md)
+* [配置微信公众号](start/wechat.md)
 
 ## 安装相关依赖 <a id="install"></a>
 
@@ -18,6 +19,8 @@
 * [安装ELK](install/elk.md)
 * [安装Jenkins](install/jenkins.md)
 * [安装Harbor仓库](install/harbor.md)
+* [安装Prometheus](install/prometheus.md)
+* [安装AlertManager](install/alertmanager.md)
 * [安装kplcloud](install/kpaas.md)
 
 ## 使用 <a id="use"></a>
@@ -48,12 +51,19 @@
   * [健康检测](use/app/probe.md)
   * [管理端口](use/app/ports.md)
   * [生成入口地址](use/app/ingress.md)
+  * [暂停应用](use/app/sleep.md)
+  * [删除应用](use/app/delete.md)
+* [定时任务](use/cronjob/cronjob.md)
 * [应用审核部署](use/audit.md)
-* [绑定微信消息推送](use/bind-wechat.md)
 * [工具集](use/tools/README.md)
   * [调整容器时间](use/tools/container-time.md)
   * [克隆应用](use/tools/app-clone.md)
+* [个人中心](use/account/user.md)
+  * [用户中心](use/account/user.md)
+  * [个人设置](use/account/set.md)
+  * [消息中心](use/account/msg.md)
 * [消息订阅](use/message.md)
+* [消息分发](use/msg-distribute.md)
 * [配置与存储](use/cfg-storage/README.md)
   * [存储类管理](use/cfg-storage/storageclass.md)
   * [Consul KV使用](use/cfg-storage/consul.md)
@@ -75,7 +85,12 @@
   * [istio-出口网关](use/security/service-entry.md)
   * [istio-虚拟服务](use/security/virtualservice.md)
 * [服务发现与负载](use/discovery.md)
-* [自动构建](use/automatic-build.md)
+
+## API<a id="api"></a>
+
+- [自动构建](api/automatic-build.md)
+
+- [处理Prometheus告警](api/prometheus-alert.md)
 
 ## 开发指南 <a id="develop"></a>
 
