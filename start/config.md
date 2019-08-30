@@ -14,7 +14,7 @@ description: app.cfg 配置文件解析>
 | :--- | :--- | :--- |
 | http\_static | 静态文件路径 | ./static/ |
 | http\_proxy | 代理服务地址 | 如果您的环境是隔离的，又需要访问外网的话就填写 |
-| logs\_path | 日志文件目录 | 如果填写由会输出日志文件到指定目录 |
+| logs\_path | 日志文件目录 | 如果填写会输出日志文件到指定目录 |
 | upload\_path | 上传文件的路径 | 发公告时上传资源的路径，如果需要持久化，请配置pvc |
 | domain | 网站域名 | https://kplcloud.nsini.com |
 | login\_type | 登陆的类型 | 1. ldap 需要在下面的 \[ldap\] 填写相关的ldap地址及配置信息 2. email 邮箱登陆 |
