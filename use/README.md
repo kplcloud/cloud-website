@@ -33,7 +33,7 @@ kplcloud已服务于宜人财富部分业务，稳定管理了上百个应用，
 
 ### 安装教程
 
-[安装教程](https://docs.kpaas.nsini.com/install/kpaas)
+[安装教程](https://docs.nsini.com/install/kpaas)
 
 ### 依赖
 
@@ -57,7 +57,7 @@ $ cd kplcloud
 2. 配置文件准备
 
     - 将连接Kubernets的kubeconfig文件放到该项目目录
-    - app.cfg文件配置也放到该项目目录app.cfg配置请参考 [配置文件解析](https://docs.kpaas.nsini.com/start/config)
+    - app.cfg文件配置也放到该项目目录app.cfg配置请参考 [配置文件解析](https://docs.nsini.com/start/config)
 
 3. docker-compose 启动
 
@@ -74,11 +74,11 @@ $ make run
 
 ## 使用教程
 
-[使用教程](https://docs.kpaas.nsini.com/use/login)
+[使用教程](https://docs.nsini.com/use/login)
 
 ### 视频教程
 
-- [创建一个应用](https://docs.kpaas.nsini.com/use/app/create-app/golang)
+- [创建一个应用](https://docs.nsini.com/use/app/create-app/golang)
 
 ## 成员
 
