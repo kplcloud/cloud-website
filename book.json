@@ -1,0 +1,24 @@
+{
+    "plugins": ["github", "highlight", "search", "mygitalk", "copy-code-button", "code", "expandable-chapters", "back-to-top-button", 
+           "-sharing", "sharing-plus"],
+"pluginsConfig": {
+        "sharing": {
+             "douban": false,
+             "facebook": false,
+             "google": true,
+             "pocket": false,
+             "qq": false,
+             "qzone": true,
+             "twitter": false,
+             "weibo": true,
+          "all": [
+               "douban", "facebook", "google", "instapaper", "linkedin","twitter", "weibo", 
+               "messenger","qq", "qzone","viber","whatsapp"
+           ]
+       },
+	"github": {
+          "url": "https://github.com/kplcloud/cloud-website.git"
+        },
+"mygitalk": { "clientID": "f9c7497acefb210b7b1b", "clientSecret": "4cf66cb16ee3138910ce5839aeace57c94c43404", "repo": "cloud-website", "owner": "icowan", "admin": ["icowan"], "distractionFreeMode": false }
+    }
+}
