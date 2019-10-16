@@ -1,4 +1,4 @@
-FROM kplcloud/gitbook:v3.2.3-191017 AS build_env
+FROM kplcloud/gitbook:v3.2.3-191018 AS build_env
 
 MAINTAINER dudulu <solacowa@gmail.com>
 
