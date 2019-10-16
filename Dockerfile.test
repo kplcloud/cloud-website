@@ -1,6 +1,4 @@
-FROM kplcloud/gitbook:v3.2.3-191016 AS build_env
-
-MAINTAINER dudulu <solacowa@gmail.com>
+FROM docker-prod-virtual.repo.yrd.creditease.corp/gitbook:v3.2.3 AS build_env
 
 COPY ./ /opt/gitbook
 
