@@ -1,4 +1,4 @@
-FROM kplcloud/gitbook:v3.2.3-191018 AS build_env
+FROM kplcloud/gitbook:v3.2.3-191020 AS build_env
 
 MAINTAINER dudulu <solacowa@gmail.com>
 
@@ -6,6 +6,7 @@ COPY ./ /opt/gitbook
 
 WORKDIR /opt/gitbook
 
+RUN mv /opt/data/node_modules /opt/gitbook/
 RUN gitbook build
 
 FROM nginx:1.17.3-alpine

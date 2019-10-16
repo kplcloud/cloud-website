@@ -14,11 +14,20 @@ RUN npm install -g gitbook-cli \
 	gitbook-plugin-expandable-chapters \
 	gitbook-plugin-back-to-top-button \
 	gitbook-plugin-sharing-plus --registry=https://registry.npm.taobao.org
-RUN mkdir -p /opt/data
-COPY ./README.md /opt/data
+RUN mkdir -p /opt/gitbook
+COPY ./README.md /opt/gitbook
+COPY ./book.json /opt/gitbook
 WORKDIR /opt/data
 RUN gitbook fetch 3.2.3
-RUN gitbook install mygitalk github highlight search copy-code-button code expandable-chapters back-to-top-button sharing-plus
+#RUN gitbook install mygitalk
+#RUN gitbook install donate
+#RUN gitbook install github
+#RUN gitbook install copy-code-button
+#RUN gitbook install code
+#RUN gitbook install expandable-chapters
+#RUN gitbook install back-to-top-button
+#RUN gitbook install sharing-plus
+RUN gitbook install .
 RUN gitbook build
 
 CMD ["bash"]
