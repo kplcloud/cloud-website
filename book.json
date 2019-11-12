@@ -1,4 +1,10 @@
 {
+
+"title": "开普勒云平台使用教程",
+    "description": "基于Kubernetes的Docker容器应用管理云平台",
+    "isbn": "019-10-16-191016-0",
+    "language": "zh-cn",
+    "direction": "ltr",
     "plugins": ["donate", "github", "highlight", "search", "mygitalk", "copy-code-button", "code", "expandable-chapters", "back-to-top-button", 
            "-sharing", "sharing-plus"],
 "pluginsConfig": {

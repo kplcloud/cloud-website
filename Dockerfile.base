@@ -17,7 +17,7 @@ RUN npm install -g gitbook-cli \
 RUN mkdir -p /opt/gitbook
 COPY ./README.md /opt/gitbook
 COPY ./book.json /opt/gitbook
-WORKDIR /opt/data
+WORKDIR /opt/gitbook
 RUN gitbook fetch 3.2.3
 #RUN gitbook install mygitalk
 #RUN gitbook install donate

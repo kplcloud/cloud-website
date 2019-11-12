@@ -17,6 +17,7 @@ $ docker pull kplcloud/kplcloud:latest
 若您的其他服务都已经准备好了，可以直接执行以下命令在kubernetes上进行部署开普勒云平台。
 
 ```bash
+$ kubectl apply -f install/kubernetes/kpaas/serviceaccount.yaml
 $ kubectl apply -f install/kubernetes/kpaas/configmap.yaml
 $ kubectl apply -f install/kubernetes/kpaas/deployment.yaml
 $ kubectl apply -f install/kubernetes/kpaas/service.yaml

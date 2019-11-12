@@ -12,3 +12,9 @@
 
 ![](http://source.qiniu.cnd.nsini.com/images/2019/08/68/dd/84/20190827-856199f3d35b454184bc6fb9ddc687fc.jpeg)
 
+
+
+## 挂载配置文件
+
+除了使用Consul作为配置中心外，您也可以通过挂载文件的方式来实现配置文件的分离。
+
