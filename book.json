@@ -5,7 +5,7 @@
     "isbn": "019-10-16-191016-0",
     "language": "zh-cn",
     "direction": "ltr",
-    "plugins": ["donate", "github", "highlight", "search", "mygitalk", "copy-code-button", "code", "expandable-chapters", "back-to-top-button", 
+    "plugins": ["donate", "github", "highlight", "search",  "copy-code-button", "code", "expandable-chapters", "back-to-top-button", 
            "-sharing", "sharing-plus"],
 "pluginsConfig": {
         "sharing": {
@@ -25,7 +25,6 @@
 	"github": {
           "url": "https://github.com/kplcloud/cloud-website.git"
         },
-"mygitalk": { "clientID": "f9c7497acefb210b7b1b", "clientSecret": "4cf66cb16ee3138910ce5839aeace57c94c43404", "repo": "cloud-website", "owner": "icowan", "admin": ["icowan"], "distractionFreeMode": false },
 	"donate": {
 		"wechat": "https://lattecake.oss-cn-beijing.aliyuncs.com/static%2Fimages%2Freward%2Fweixin-RMB-xxx.JPG",
           	"alipay": "https://lattecake.oss-cn-beijing.aliyuncs.com/static%2Fimages%2Freward%2Falipay-RMB-xxx.png",

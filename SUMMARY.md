@@ -4,7 +4,8 @@
 
 ## 开始 <a id="start"></a>
 
-* [配置文件解析](start/config.md)
+* [环境变量](start/environment.md)
+* [启动命令](start/command.md)
 * [配置gitlab与jenkins](start/jenkins.md)
 * [配置微信公众号](start/wechat.md)
 
